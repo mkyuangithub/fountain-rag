@@ -27,4 +27,25 @@ will update later
 - vue3
 - ant design
 - javascript setup语法
-// Your Chinese content here
+#### 安装指南
+##### nacos
+- 请安装naocs 2.0.2
+- 安装后导入fountain/install/nacos里的DEFAULT_GROUP中的配置，内含spring boot工程用于连接mongodb、redis、elastic search、minio的基本配置
+- nacos里相关api key，secret等都用的是系统环境变量写法，可以自定义
+##### mongodb
+- 请安装4.2.1版本，安装后导入：fountain/install/mongo-script里的建库语句以及相关数据
+##### es
+- 请安装7.9，本版本只支持es7.9，不支持高于7.9，这是spring boot 2.4.2版本特性使然。安装完后无需做任何数据导入工作
+##### redis
+- 支持7.0版本的redis，开发项目时用的是:6.2.17，安装后无数据导入工作，只要和nacos里的配置对照着设置即可。
+##### minio
+- 请安装minio-2025-02-07 go1.23.6 windows/amd64，安装后可以对照着naocs里的设置即可
+- 注意了：minio的管理员用户名和密码定义在系统环境变量
+##### qdrant安装
+- 安装
+```
+docker pull qdrant/qdrant
+docker run -p 6333:6333 qdrant/qdrant
+```
+
+
