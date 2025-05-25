@@ -1,0 +1,49 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : fountain@localhost
+ Source Server Type    : MongoDB
+ Source Server Version : 40201
+ Source Host           : localhost:27017
+ Source Schema         : fountain
+
+ Target Server Type    : MongoDB
+ Target Server Version : 40201
+ File Encoding         : 65001
+
+ Date: 25/05/2025 11:28:17
+*/
+
+
+// ----------------------------
+// Collection structure for UserKnowledgeMain
+// ----------------------------
+db.getCollection("UserKnowledgeMain").drop();
+db.createCollection("UserKnowledgeMain");
+db.getCollection("UserKnowledgeMain").createIndex({
+    knowledgeId: NumberInt("1")
+}, {
+    name: "knowledgeId_1"
+});
+db.getCollection("UserKnowledgeMain").createIndex({
+    knowledgeName: NumberInt("1")
+}, {
+    name: "knowledgeName_1"
+});
+db.getCollection("UserKnowledgeMain").createIndex({
+    createdDate: NumberInt("-1")
+}, {
+    name: "createdDate_-1"
+});
+db.getCollection("UserKnowledgeMain").createIndex({
+    updatedDate: NumberInt("-1")
+}, {
+    name: "updatedDate_-1"
+});
+db.getCollection("UserKnowledgeMain").createIndex({
+    userName: NumberInt("1"),
+    knowledgeName: NumberInt("1")
+}, {
+    name: "userName_1_knowledgeName_1",
+    unique: true
+});

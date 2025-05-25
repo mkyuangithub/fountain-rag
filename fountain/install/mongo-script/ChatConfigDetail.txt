@@ -1,0 +1,926 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : fountain@localhost
+ Source Server Type    : MongoDB
+ Source Server Version : 40201
+ Source Host           : localhost:27017
+ Source Schema         : fountain
+
+ Target Server Type    : MongoDB
+ Target Server Version : 40201
+ File Encoding         : 65001
+
+ Date: 25/05/2025 11:25:46
+*/
+
+
+// ----------------------------
+// Collection structure for ChatConfigDetail
+// ----------------------------
+db.getCollection("ChatConfigDetail").drop();
+db.createCollection("ChatConfigDetail");
+
+// ----------------------------
+// Documents of ChatConfigDetail
+// ----------------------------
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58e6da8e9b4381458e62e"),
+    configMainId: NumberLong("1697938425668158700"),
+    sequence: NumberInt("0"),
+    stepDescription: "判断是否闲聊",
+    type: NumberInt("1"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58e6da8e9b4381458e62f"),
+    configMainId: NumberLong("1697938425668158700"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行降噪、纠正、折分",
+    type: NumberInt("2"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58e6da8e9b4381458e630"),
+    configMainId: NumberLong("1697938425668158700"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语使用BG25、HYDE、GRM进行重写",
+    type: NumberInt("3"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58e6da8e9b4381458e631"),
+    configMainId: NumberLong("1697938425668158700"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行打标签、折关键字",
+    type: NumberInt("4"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58e6da8e9b4381458e632"),
+    configMainId: NumberLong("1697938425668158700"),
+    sequence: NumberInt("0"),
+    stepDescription: "重排序",
+    type: NumberInt("5"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58e6da8e9b4381458e638"),
+    configMainId: NumberLong("506003902561440960"),
+    sequence: NumberInt("0"),
+    stepDescription: "判断是否闲聊",
+    type: NumberInt("1"),
+    enabled: true,
+    stepPrompt: "- 如果客户是属于闲聊那么请你把闲聊在返回结果中标识出来。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58e6da8e9b4381458e639"),
+    configMainId: NumberLong("506003902561440960"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行降噪、纠正、折分",
+    type: NumberInt("2"),
+    enabled: true,
+    stepPrompt: "- 你首先把客户的提问中相关的敬语，打招呼等词汇去除掉。\n- 如果用户在提问中使用的问法词法或者提问有逻辑不对的地方请你帮用户纠正一下。\n- 在折分用户词语时要同时使用同义词、近义词、语义相近的词去扩充用户的提问。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58e6da8e9b4381458e63a"),
+    configMainId: NumberLong("506003902561440960"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语使用BG25、HYDE、GRM进行重写",
+    type: NumberInt("3"),
+    enabled: true,
+    stepPrompt: "#同义词\n- 科技技城又称科技城公租房\n- 临港一期、二期、三期、上期又称临港公租房\n- 公租房等于临港公租房等于一期、二期、三期、四期。\n- 有看到附近、周边配套或者周边设施一类措词全部折成：周边, 附近, 设施, 饮食, 教育, 住宿, 出行, 吃的, 娱乐, 文化, 商超, 交通,周边配套, 周边设施\n# 岐义解释\n- 临港公租房等于一期、二期、三期、四期的内容\n- 临港公租房不等于科技城\n- 公租房不等于科技城\n# 打标签折关键字特别要求\n- 同一条数据可以含有公租房、临港公租房、一期、二期、三期、四期这样的关键字。\n- 同一条数据绝对不可以同时列出科技城和公租房(包括临港公租房、一期、二期、三期、四期）的关键字。\n- 作为负责在线租房咨询、租房管理、相关报修保障、以及公租房小区周边等配套设施、设备维修的在线咨询和问答。临港公租房1期、临港公租房2期、临港公租房3期、临港公租房4期、科技城（又称临港科技城）是5个地理位置上不同的、独立的区域。对于租房管理业务分为分套内和套外两种。套内(包括住房内所有电器、空调、住房内装修、住房内器具、用品、家具、住房内厨房、卫生间、洗浴等用品、住房内家内空间里的一切物品、套内装修专注于提升每户居民的居住品质，是居民日常生活直接接触的部分)指客户的住房内全部问题属于“聚悦物业”公司负责。套外（包括小区、苑、园区、楼道）即客户住房外部的一切问题如：楼道、电梯、公共走廊、门厅、小区内的绿化带、停车场、健身区、儿童游乐场等共享设施，以及建筑物的外墙装饰、屋顶防水处理这些问题，套外装修则侧重于改善和维护小区的公共环境，服务于所有居民的共同利益，促进社区的整体和谐与美观这些都属于“申能物业”公司负责。公租房1期有两个小区：凌波苑、海云苑。公租房2期有两个小区：雨浥苑、春晓苑。公租房3期有一个小区：新元盛璟苑。公租房4期有三个小区：林彩苑、芳菲苑、著雨苑。知识库内容中凡涉及到电话号码、地址、商场、建筑、地标、小区、医院、学校、周边设施、路名、租房相关政策、租房后相关服务条款、公租房租赁相应规则、规定、条款等。因此我们先要对手上己有知识库内容进行打标签、归档的工作。请你以此专业背景知识想一下作为这样一个专业领域的在线客服在线搜索引擎会用到哪些关键字以便于用户在提出相应的诉求后快速可以检索到相关的知识库内的答案？请你把这些标签折成搜索引擎可以适合的关键字每个关键字。\n- 按照一个搜索引擎可以搜索出的最大有效关键词重新折解客户的提问为带有英文数字逗号的关键词排列，关键字颗粒越细越好就和搜索引擎的分词那种效果一样。\n- 折解时注意要把越能命中搜索结果的关键词越往前排，把称谓，动词放到整句提问的最后（即句子末尾）。\n- 关键字折得越多越好，关键字一定是要可以覆盖用户的提问、包括同义词、语义相近同时请记得把你自己如何回答这个问题的答案也折成关键字加入到改写的query里。\n- 把用户的住址和一期、二期、三期、四期、科技城做mapping，折分时除了用户自己提到居住的小区还要把它所属的期数标注上。科技城不得和公租房（包括临港、临港公租房、一期、二期、三期、四期）同时出现在一条数据里。\n- 当用户没有提到科技城也没有明确的提到一期、二期、三期、四期，请你为他加上一期、二期、三期、四期的标签但不得和科技城同时出现在一条数据里。\n- 而当用户如果明确提到科技城时请不要加任何临港、一期、二期、三期、四期的标签。科技城和临港公租房(包括一期、二期、三期、四期）是互斥的。\n- 在打标签、折分关键词时你不能only以当前用户的提问而是要至少关联5条用户历史对话理解上下文全意后再来做标签。\n- 科技城和公租房（包括一期、二期、三期、四）绝对不可以在你返回的结果里同时出现，比如说：\n - 正确的示例1： 科技城, 周边信息\n - 错误的示例1: 科技城, 一期, 二期, 三期, 四期, 公租房\n - 错误的示例2: 科技城, 一期, 二期, 三期, 四期, 临港公租房",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58e6da8e9b4381458e63b"),
+    configMainId: NumberLong("506003902561440960"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行打标签、折关键字",
+    type: NumberInt("4"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58e6da8e9b4381458e63c"),
+    configMainId: NumberLong("506003902561440960"),
+    sequence: NumberInt("0"),
+    stepDescription: "重排序",
+    type: NumberInt("5"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58e6da8e9b4381458e63d"),
+    configMainId: NumberLong("40153123335311464"),
+    sequence: NumberInt("0"),
+    stepDescription: "判断是否闲聊",
+    type: NumberInt("1"),
+    enabled: true,
+    stepPrompt: "- 如果客户是属于闲聊那么请你把闲聊在返回结果中标识出来。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.489Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.489Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58e6da8e9b4381458e63e"),
+    configMainId: NumberLong("40153123335311464"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行降噪、纠正、折分",
+    type: NumberInt("2"),
+    enabled: true,
+    stepPrompt: "- 你首先把客户的提问中相关的敬语，打招呼等词汇去除掉。\n- 如果用户在提问中使用的问法词法或者提问有逻辑不对的地方请你帮用户纠正一下。\n- 在折分用户词语时要同时使用同义词、近义词、语义相近的词去扩充用户的提问。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.489Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.489Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58e6da8e9b4381458e63f"),
+    configMainId: NumberLong("40153123335311464"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语使用BG25、HYDE、GRM进行重写",
+    type: NumberInt("3"),
+    enabled: true,
+    stepPrompt: "- 试想一下你是一个在线图书知识库，当一个用户问你相关图书里的内容时你会如何去索引和搜索，为了准确搜索到相关图书你需要哪些标签和关键字呢？请你根据用户的上下文语义折解用户的问题成适合搜索引擎用的关键字。\n- 按照一个搜索引擎可以搜索出的最大有效关键词重新折解客户的提问为带有英文数字逗号的关键词排列，关键字颗粒越细越好就和搜索引擎的分词那种效果一样。\n- 折解时注意要把越能命中搜索结果的关键词越往前排，把称谓，动词放到整句提问的最后（即句子末尾）。\n- 关键字折得越多越好，关键字一定是要可以覆盖用户的提问、包括同义词、语义相近同时请记得把你自己如何回答这个问题的答案也折成关键字加入到改写的query里。\n- 在打标签、折分关键词时你不能only以当前用户的提问而是要至少关联5条用户历史对话理解上下文全意后再来做标签。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.489Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.489Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58e6da8e9b4381458e640"),
+    configMainId: NumberLong("40153123335311464"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行打标签、折关键字",
+    type: NumberInt("4"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.489Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.489Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58e6da8e9b4381458e641"),
+    configMainId: NumberLong("40153123335311464"),
+    sequence: NumberInt("0"),
+    stepDescription: "重排序",
+    type: NumberInt("5"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.489Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.489Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58f0ba8e9b4381458e64c"),
+    configMainId: NumberLong("1697938425668158700"),
+    sequence: NumberInt("0"),
+    stepDescription: "判断是否闲聊",
+    type: NumberInt("1"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58f0ba8e9b4381458e64d"),
+    configMainId: NumberLong("1697938425668158700"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行降噪、纠正、折分",
+    type: NumberInt("2"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58f0ba8e9b4381458e64e"),
+    configMainId: NumberLong("1697938425668158700"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语使用BG25、HYDE、GRM进行重写",
+    type: NumberInt("3"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58f0ba8e9b4381458e64f"),
+    configMainId: NumberLong("1697938425668158700"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行打标签、折关键字",
+    type: NumberInt("4"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58f0ba8e9b4381458e650"),
+    configMainId: NumberLong("1697938425668158700"),
+    sequence: NumberInt("0"),
+    stepDescription: "重排序",
+    type: NumberInt("5"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58f0ba8e9b4381458e656"),
+    configMainId: NumberLong("506003902561440960"),
+    sequence: NumberInt("0"),
+    stepDescription: "判断是否闲聊",
+    type: NumberInt("1"),
+    enabled: true,
+    stepPrompt: "- 如果客户是属于闲聊那么请你把闲聊在返回结果中标识出来。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58f0ba8e9b4381458e657"),
+    configMainId: NumberLong("506003902561440960"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行降噪、纠正、折分",
+    type: NumberInt("2"),
+    enabled: true,
+    stepPrompt: "- 你首先把客户的提问中相关的敬语，打招呼等词汇去除掉。\n- 如果用户在提问中使用的问法词法或者提问有逻辑不对的地方请你帮用户纠正一下。\n- 在折分用户词语时要同时使用同义词、近义词、语义相近的词去扩充用户的提问。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58f0ba8e9b4381458e658"),
+    configMainId: NumberLong("506003902561440960"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语使用BG25、HYDE、GRM进行重写",
+    type: NumberInt("3"),
+    enabled: true,
+    stepPrompt: "#同义词\n- 科技技城又称科技城公租房\n- 临港一期、二期、三期、上期又称临港公租房\n- 公租房等于临港公租房等于一期、二期、三期、四期。\n- 有看到附近、周边配套或者周边设施一类措词全部折成：周边, 附近, 设施, 饮食, 教育, 住宿, 出行, 吃的, 娱乐, 文化, 商超, 交通,周边配套, 周边设施\n# 岐义解释\n- 临港公租房等于一期、二期、三期、四期的内容\n- 临港公租房不等于科技城\n- 公租房不等于科技城\n# 打标签折关键字特别要求\n- 同一条数据可以含有公租房、临港公租房、一期、二期、三期、四期这样的关键字。\n- 同一条数据绝对不可以同时列出科技城和公租房(包括临港公租房、一期、二期、三期、四期）的关键字。\n- 作为负责在线租房咨询、租房管理、相关报修保障、以及公租房小区周边等配套设施、设备维修的在线咨询和问答。临港公租房1期、临港公租房2期、临港公租房3期、临港公租房4期、科技城（又称临港科技城）是5个地理位置上不同的、独立的区域。对于租房管理业务分为分套内和套外两种。套内(包括住房内所有电器、空调、住房内装修、住房内器具、用品、家具、住房内厨房、卫生间、洗浴等用品、住房内家内空间里的一切物品、套内装修专注于提升每户居民的居住品质，是居民日常生活直接接触的部分)指客户的住房内全部问题属于“聚悦物业”公司负责。套外（包括小区、苑、园区、楼道）即客户住房外部的一切问题如：楼道、电梯、公共走廊、门厅、小区内的绿化带、停车场、健身区、儿童游乐场等共享设施，以及建筑物的外墙装饰、屋顶防水处理这些问题，套外装修则侧重于改善和维护小区的公共环境，服务于所有居民的共同利益，促进社区的整体和谐与美观这些都属于“申能物业”公司负责。公租房1期有两个小区：凌波苑、海云苑。公租房2期有两个小区：雨浥苑、春晓苑。公租房3期有一个小区：新元盛璟苑。公租房4期有三个小区：林彩苑、芳菲苑、著雨苑。知识库内容中凡涉及到电话号码、地址、商场、建筑、地标、小区、医院、学校、周边设施、路名、租房相关政策、租房后相关服务条款、公租房租赁相应规则、规定、条款等。因此我们先要对手上己有知识库内容进行打标签、归档的工作。请你以此专业背景知识想一下作为这样一个专业领域的在线客服在线搜索引擎会用到哪些关键字以便于用户在提出相应的诉求后快速可以检索到相关的知识库内的答案？请你把这些标签折成搜索引擎可以适合的关键字每个关键字。\n- 按照一个搜索引擎可以搜索出的最大有效关键词重新折解客户的提问为带有英文数字逗号的关键词排列，关键字颗粒越细越好就和搜索引擎的分词那种效果一样。\n- 折解时注意要把越能命中搜索结果的关键词越往前排，把称谓，动词放到整句提问的最后（即句子末尾）。\n- 关键字折得越多越好，关键字一定是要可以覆盖用户的提问、包括同义词、语义相近同时请记得把你自己如何回答这个问题的答案也折成关键字加入到改写的query里。\n- 把用户的住址和一期、二期、三期、四期、科技城做mapping，折分时除了用户自己提到居住的小区还要把它所属的期数标注上。科技城不得和公租房（包括临港、临港公租房、一期、二期、三期、四期）同时出现在一条数据里。\n- 当用户没有提到科技城也没有明确的提到一期、二期、三期、四期，请你为他加上一期、二期、三期、四期的标签但不得和科技城同时出现在一条数据里。\n- 而当用户如果明确提到科技城时请不要加任何临港、一期、二期、三期、四期的标签。科技城和临港公租房(包括一期、二期、三期、四期）是互斥的。\n- 在打标签、折分关键词时你不能only以当前用户的提问而是要至少关联5条用户历史对话理解上下文全意后再来做标签。\n- 科技城和公租房（包括一期、二期、三期、四）绝对不可以在你返回的结果里同时出现，比如说：\n - 正确的示例1： 科技城, 周边信息\n - 错误的示例1: 科技城, 一期, 二期, 三期, 四期, 公租房\n - 错误的示例2: 科技城, 一期, 二期, 三期, 四期, 临港公租房",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58f0ba8e9b4381458e659"),
+    configMainId: NumberLong("506003902561440960"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行打标签、折关键字",
+    type: NumberInt("4"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58f0ba8e9b4381458e65a"),
+    configMainId: NumberLong("506003902561440960"),
+    sequence: NumberInt("0"),
+    stepDescription: "重排序",
+    type: NumberInt("5"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58f0ba8e9b4381458e65b"),
+    configMainId: NumberLong("40153123335311464"),
+    sequence: NumberInt("0"),
+    stepDescription: "判断是否闲聊",
+    type: NumberInt("1"),
+    enabled: true,
+    stepPrompt: "- 如果客户是属于闲聊那么请你把闲聊在返回结果中标识出来。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.489Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.489Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58f0ba8e9b4381458e65c"),
+    configMainId: NumberLong("40153123335311464"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行降噪、纠正、折分",
+    type: NumberInt("2"),
+    enabled: true,
+    stepPrompt: "- 你首先把客户的提问中相关的敬语，打招呼等词汇去除掉。\n- 如果用户在提问中使用的问法词法或者提问有逻辑不对的地方请你帮用户纠正一下。\n- 在折分用户词语时要同时使用同义词、近义词、语义相近的词去扩充用户的提问。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.489Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.489Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58f0ba8e9b4381458e65d"),
+    configMainId: NumberLong("40153123335311464"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语使用BG25、HYDE、GRM进行重写",
+    type: NumberInt("3"),
+    enabled: true,
+    stepPrompt: "- 试想一下你是一个在线图书知识库，当一个用户问你相关图书里的内容时你会如何去索引和搜索，为了准确搜索到相关图书你需要哪些标签和关键字呢？请你根据用户的上下文语义折解用户的问题成适合搜索引擎用的关键字。\n- 按照一个搜索引擎可以搜索出的最大有效关键词重新折解客户的提问为带有英文数字逗号的关键词排列，关键字颗粒越细越好就和搜索引擎的分词那种效果一样。\n- 折解时注意要把越能命中搜索结果的关键词越往前排，把称谓，动词放到整句提问的最后（即句子末尾）。\n- 关键字折得越多越好，关键字一定是要可以覆盖用户的提问、包括同义词、语义相近同时请记得把你自己如何回答这个问题的答案也折成关键字加入到改写的query里。\n- 在打标签、折分关键词时你不能only以当前用户的提问而是要至少关联5条用户历史对话理解上下文全意后再来做标签。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.489Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.489Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58f0ba8e9b4381458e65e"),
+    configMainId: NumberLong("40153123335311464"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行打标签、折关键字",
+    type: NumberInt("4"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.489Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.489Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67d58f0ba8e9b4381458e65f"),
+    configMainId: NumberLong("40153123335311464"),
+    sequence: NumberInt("0"),
+    stepDescription: "重排序",
+    type: NumberInt("5"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.489Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.489Z"),
+    createdBy: "",
+    userName: "",
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67e165c633dd841d19d441c0"),
+    configMainId: NumberLong("1697938425668158700"),
+    sequence: NumberInt("0"),
+    stepDescription: "判断是否闲聊",
+    type: NumberInt("1"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67e165c633dd841d19d441c1"),
+    configMainId: NumberLong("1697938425668158700"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行降噪、纠正、折分",
+    type: NumberInt("2"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67e165c633dd841d19d441c2"),
+    configMainId: NumberLong("1697938425668158700"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语使用BG25、HYDE、GRM进行重写",
+    type: NumberInt("3"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67e165c633dd841d19d441c3"),
+    configMainId: NumberLong("1697938425668158700"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行打标签、折关键字",
+    type: NumberInt("4"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67e165c633dd841d19d441c4"),
+    configMainId: NumberLong("1697938425668158700"),
+    sequence: NumberInt("0"),
+    stepDescription: "重排序",
+    type: NumberInt("5"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67e165c633dd841d19d441ca"),
+    configMainId: NumberLong("506003902561440960"),
+    sequence: NumberInt("0"),
+    stepDescription: "判断是否闲聊",
+    type: NumberInt("1"),
+    enabled: true,
+    stepPrompt: "- 如果客户是属于闲聊那么请你把闲聊在返回结果中标识出来。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67e165c633dd841d19d441cb"),
+    configMainId: NumberLong("506003902561440960"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行降噪、纠正、折分",
+    type: NumberInt("2"),
+    enabled: true,
+    stepPrompt: "- 你首先把客户的提问中相关的敬语，打招呼等词汇去除掉。\n- 如果用户在提问中使用的问法词法或者提问有逻辑不对的地方请你帮用户纠正一下。\n- 在折分用户词语时要同时使用同义词、近义词、语义相近的词去扩充用户的提问。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67e165c633dd841d19d441cc"),
+    configMainId: NumberLong("506003902561440960"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语使用BG25、HYDE、GRM进行重写",
+    type: NumberInt("3"),
+    enabled: true,
+    stepPrompt: "#同义词\n- 科技技城又称科技城公租房\n- 临港一期、二期、三期、上期又称临港公租房\n- 公租房等于临港公租房等于一期、二期、三期、四期。\n- 有看到附近、周边配套或者周边设施一类措词全部折成：周边, 附近, 设施, 饮食, 教育, 住宿, 出行, 吃的, 娱乐, 文化, 商超, 交通,周边配套, 周边设施\n# 岐义解释\n- 临港公租房等于一期、二期、三期、四期的内容\n- 临港公租房不等于科技城\n- 公租房不等于科技城\n# 打标签折关键字特别要求\n- 同一条数据可以含有公租房、临港公租房、一期、二期、三期、四期这样的关键字。\n- 同一条数据绝对不可以同时列出科技城和公租房(包括临港公租房、一期、二期、三期、四期）的关键字。\n- 作为负责在线租房咨询、租房管理、相关报修保障、以及公租房小区周边等配套设施、设备维修的在线咨询和问答。临港公租房1期、临港公租房2期、临港公租房3期、临港公租房4期、科技城（又称临港科技城）是5个地理位置上不同的、独立的区域。对于租房管理业务分为分套内和套外两种。套内(包括住房内所有电器、空调、住房内装修、住房内器具、用品、家具、住房内厨房、卫生间、洗浴等用品、住房内家内空间里的一切物品、套内装修专注于提升每户居民的居住品质，是居民日常生活直接接触的部分)指客户的住房内全部问题属于“聚悦物业”公司负责。套外（包括小区、苑、园区、楼道）即客户住房外部的一切问题如：楼道、电梯、公共走廊、门厅、小区内的绿化带、停车场、健身区、儿童游乐场等共享设施，以及建筑物的外墙装饰、屋顶防水处理这些问题，套外装修则侧重于改善和维护小区的公共环境，服务于所有居民的共同利益，促进社区的整体和谐与美观这些都属于“申能物业”公司负责。公租房1期有两个小区：凌波苑、海云苑。公租房2期有两个小区：雨浥苑、春晓苑。公租房3期有一个小区：新元盛璟苑。公租房4期有三个小区：林彩苑、芳菲苑、著雨苑。知识库内容中凡涉及到电话号码、地址、商场、建筑、地标、小区、医院、学校、周边设施、路名、租房相关政策、租房后相关服务条款、公租房租赁相应规则、规定、条款等。因此我们先要对手上己有知识库内容进行打标签、归档的工作。请你以此专业背景知识想一下作为这样一个专业领域的在线客服在线搜索引擎会用到哪些关键字以便于用户在提出相应的诉求后快速可以检索到相关的知识库内的答案？请你把这些标签折成搜索引擎可以适合的关键字每个关键字。\n- 按照一个搜索引擎可以搜索出的最大有效关键词重新折解客户的提问为带有英文数字逗号的关键词排列，关键字颗粒越细越好就和搜索引擎的分词那种效果一样。\n- 折解时注意要把越能命中搜索结果的关键词越往前排，把称谓，动词放到整句提问的最后（即句子末尾）。\n- 关键字折得越多越好，关键字一定是要可以覆盖用户的提问、包括同义词、语义相近同时请记得把你自己如何回答这个问题的答案也折成关键字加入到改写的query里。\n- 把用户的住址和一期、二期、三期、四期、科技城做mapping，折分时除了用户自己提到居住的小区还要把它所属的期数标注上。科技城不得和公租房（包括临港、临港公租房、一期、二期、三期、四期）同时出现在一条数据里。\n- 当用户没有提到科技城也没有明确的提到一期、二期、三期、四期，请你为他加上一期、二期、三期、四期的标签但不得和科技城同时出现在一条数据里。\n- 而当用户如果明确提到科技城时请不要加任何临港、一期、二期、三期、四期的标签。科技城和临港公租房(包括一期、二期、三期、四期）是互斥的。\n- 在打标签、折分关键词时你不能only以当前用户的提问而是要至少关联5条用户历史对话理解上下文全意后再来做标签。\n- 科技城和公租房（包括一期、二期、三期、四）绝对不可以在你返回的结果里同时出现，比如说：\n - 正确的示例1： 科技城, 周边信息\n - 错误的示例1: 科技城, 一期, 二期, 三期, 四期, 公租房\n - 错误的示例2: 科技城, 一期, 二期, 三期, 四期, 临港公租房",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67e165c633dd841d19d441cd"),
+    configMainId: NumberLong("506003902561440960"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行打标签、折关键字",
+    type: NumberInt("4"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67e165c633dd841d19d441ce"),
+    configMainId: NumberLong("506003902561440960"),
+    sequence: NumberInt("0"),
+    stepDescription: "重排序",
+    type: NumberInt("5"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-15T14:21:35.488Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.488Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67eabc7ca436f3043c6d2db3"),
+    configMainId: NumberLong("40153123335311464"),
+    sequence: NumberInt("0"),
+    stepDescription: "判断是否闲聊",
+    type: NumberInt("1"),
+    enabled: true,
+    stepPrompt: "- 如果客户是属于闲聊那么请你把闲聊在返回结果中标识出来。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-31T15:58:06.616Z"),
+    updatedDate: ISODate("2025-03-31T15:58:06.616Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67eabc7ca436f3043c6d2db4"),
+    configMainId: NumberLong("40153123335311464"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行降噪、纠正、折分",
+    type: NumberInt("2"),
+    enabled: true,
+    stepPrompt: "- 你首先把客户的提问中相关的敬语，打招呼等词汇去除掉。\n- 如果用户在提问中使用的问法词法或者提问有逻辑不对的地方请你帮用户纠正一下。\n- 在折分用户词语时要同时使用同义词、近义词、语义相近的词去扩充用户的提问。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-31T15:58:06.616Z"),
+    updatedDate: ISODate("2025-03-31T15:58:06.616Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67eabc7ca436f3043c6d2db5"),
+    configMainId: NumberLong("40153123335311464"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语使用BG25、HYDE、GRM进行重写",
+    type: NumberInt("3"),
+    enabled: true,
+    stepPrompt: "- 试想一下你是一个在线图书知识库，当一个用户问你相关图书里的内容时你会如何去索引和搜索，为了准确搜索到相关图书你需要哪些标签和关键字呢？请你根据用户的上下文语义折解用户的问题成适合搜索引擎用的关键字。\n- 按照一个搜索引擎可以搜索出的最大有效关键词重新折解客户的提问为带有英文数字逗号的关键词排列，关键字颗粒越细越好就和搜索引擎的分词那种效果一样。\n- 折解时注意要把越能命中搜索结果的关键词越往前排，把称谓，动词放到整句提问的最后（即句子末尾）。\n- 关键字折得越多越好，关键字一定是要可以覆盖用户的提问、包括同义词、语义相近同时请记得把你自己如何回答这个问题的答案也折成关键字加入到改写的query里。\n- 在打标签、折分关键词时你不能only以当前用户的提问而是要至少关联5条用户历史对话理解上下文全意后再来做标签。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-31T15:58:06.616Z"),
+    updatedDate: ISODate("2025-03-31T15:58:06.616Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67eabc7ca436f3043c6d2db6"),
+    configMainId: NumberLong("40153123335311464"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行打标签、折关键字",
+    type: NumberInt("4"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-31T15:58:06.616Z"),
+    updatedDate: ISODate("2025-03-31T15:58:06.616Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67eabc7ca436f3043c6d2db7"),
+    configMainId: NumberLong("40153123335311464"),
+    sequence: NumberInt("0"),
+    stepDescription: "重排序",
+    type: NumberInt("5"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-31T15:58:06.616Z"),
+    updatedDate: ISODate("2025-03-31T15:58:06.616Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67eabc7ca436f3043c6d2db8"),
+    configMainId: NumberLong("295945"),
+    sequence: NumberInt("0"),
+    stepDescription: "判断是否闲聊",
+    type: NumberInt("1"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-31T15:58:06.616Z"),
+    updatedDate: ISODate("2025-03-31T15:58:06.616Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67eabc7ca436f3043c6d2db9"),
+    configMainId: NumberLong("295945"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行降噪、纠正、折分",
+    type: NumberInt("2"),
+    enabled: true,
+    stepPrompt: "- 你首先把客户的提问中相关的敬语，打招呼等词汇去除掉。\n- 如果用户在提问中使用的问法词法或者提问有逻辑不对的地方请你帮用户纠正一下。\n- 在折分用户词语时要同时使用同义词、近义词、语义相近的词去扩充用户的提问。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-31T15:58:06.616Z"),
+    updatedDate: ISODate("2025-03-31T15:58:06.616Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67eabc7ca436f3043c6d2dba"),
+    configMainId: NumberLong("295945"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语使用BG25、HYDE、GRM进行重写",
+    type: NumberInt("3"),
+    enabled: true,
+    stepPrompt: "# 打标签折关键字特别要求\n- 请你以公司相关规章、制度、条款、操作手册的解读的专业背景知识想一下作为这样一个专业领域的在线客服在线搜索引擎会用到哪些关键字以便于用户在提出相应的诉求后快速可以检索到相关的知识库内的答案？请你把这些标签折成搜索引擎可以适合的关键字每个关键字。\n- 按照一个搜索引擎可以搜索出的最大有效关键词重新折解客户的提问为带有英文数字逗号的关键词排列，关键字颗粒越细越好就和搜索引擎的分词那种效果一样。\n- 折解时注意要把越能命中搜索结果的关键词越往前排，把称谓，动词放到整句提问的最后（即句子末尾）。\n- 关键字折得越多越好，关键字一定是要可以覆盖用户的提问、包括同义词、语义相近同时请记得把你自己如何回答这个问题的答案也折成关键字加入到改写的query里。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-31T15:58:06.616Z"),
+    updatedDate: ISODate("2025-03-31T15:58:06.616Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67eabc7ca436f3043c6d2dbb"),
+    configMainId: NumberLong("295945"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行打标签、折关键字",
+    type: NumberInt("4"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-31T15:58:06.616Z"),
+    updatedDate: ISODate("2025-03-31T15:58:06.616Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67eabc7ca436f3043c6d2dbc"),
+    configMainId: NumberLong("295945"),
+    sequence: NumberInt("0"),
+    stepDescription: "重排序",
+    type: NumberInt("5"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-31T15:58:06.616Z"),
+    updatedDate: ISODate("2025-03-31T15:58:06.616Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67eabc7ca436f3043c6d2dbd"),
+    configMainId: NumberLong("623635"),
+    sequence: NumberInt("0"),
+    stepDescription: "判断是否闲聊",
+    type: NumberInt("1"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-31T15:58:06.617Z"),
+    updatedDate: ISODate("2025-03-31T15:58:06.617Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67eabc7ca436f3043c6d2dbe"),
+    configMainId: NumberLong("623635"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行降噪、纠正、折分",
+    type: NumberInt("2"),
+    enabled: true,
+    stepPrompt: "- 你首先把客户的提问中相关的敬语，打招呼等词汇去除掉。\n- 如果用户在提问中使用的问法词法或者提问有逻辑不对的地方请你帮用户纠正一下。\n- 在折分用户词语时要同时使用同义词、近义词、语义相近的词去扩充用户的提问。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-31T15:58:06.617Z"),
+    updatedDate: ISODate("2025-03-31T15:58:06.617Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67eabc7ca436f3043c6d2dbf"),
+    configMainId: NumberLong("623635"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语使用BG25、HYDE、GRM进行重写",
+    type: NumberInt("3"),
+    enabled: true,
+    stepPrompt: "# 打标签折关键字特别要求\n- 请你以公司相关规章、制度、条款、操作手册的解读的专业背景知识想一下作为这样一个专业领域的在线客服在线搜索引擎会用到哪些关键字以便于用户在提出相应的诉求后快速可以检索到相关的知识库内的答案？请你把这些标签折成搜索引擎可以适合的关键字每个关键字。\n- 按照一个搜索引擎可以搜索出的最大有效关键词重新折解客户的提问为带有英文数字逗号的关键词排列，关键字颗粒越细越好就和搜索引擎的分词那种效果一样。\n- 折解时注意要把越能命中搜索结果的关键词越往前排，把称谓，动词放到整句提问的最后（即句子末尾）。\n- 关键字折得越多越好，关键字一定是要可以覆盖用户的提问、包括同义词、语义相近同时请记得把你自己如何回答这个问题的答案也折成关键字加入到改写的query里。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-31T15:58:06.617Z"),
+    updatedDate: ISODate("2025-03-31T15:58:06.617Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67eabc7ca436f3043c6d2dc0"),
+    configMainId: NumberLong("623635"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行打标签、折关键字",
+    type: NumberInt("4"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-31T15:58:06.617Z"),
+    updatedDate: ISODate("2025-03-31T15:58:06.617Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67eabc7ca436f3043c6d2dc1"),
+    configMainId: NumberLong("623635"),
+    sequence: NumberInt("0"),
+    stepDescription: "重排序",
+    type: NumberInt("5"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-31T15:58:06.617Z"),
+    updatedDate: ISODate("2025-03-31T15:58:06.617Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67eabc7ca436f3043c6d2dc2"),
+    configMainId: NumberLong("4490377"),
+    sequence: NumberInt("0"),
+    stepDescription: "判断是否闲聊",
+    type: NumberInt("1"),
+    enabled: true,
+    stepPrompt: "- 如果客户是属于闲聊那么请你把闪聊在返回结果中标识出来。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-31T15:58:06.617Z"),
+    updatedDate: ISODate("2025-04-23T13:42:13.867Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67eabc7ca436f3043c6d2dc3"),
+    configMainId: NumberLong("4490377"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行降噪、纠正、折分",
+    type: NumberInt("2"),
+    enabled: true,
+    stepPrompt: "- 你首先把客户的提问中相关的敬语，打招呼等词汇去除掉。\n- 如果用户在提问中使用的问法词法或者提问有逻辑不对的地方请你帮用户纠正一下。\n- 在折分用户词语时要同时使用同义词、近义词、语义相近的词去扩充用户的提问。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-31T15:58:06.617Z"),
+    updatedDate: ISODate("2025-04-23T13:42:13.87Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67eabc7ca436f3043c6d2dc4"),
+    configMainId: NumberLong("4490377"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语使用BG25、HYDE、GRM进行重写",
+    type: NumberInt("3"),
+    enabled: true,
+    stepPrompt: "- 按照一个搜索引擎可以搜索出的最大有效关键词重新折解客户的提问为带有英文数字逗号的关键词排列。\n- 折解时注意要把越能命中搜索结果的关键词越往前排，把称谓，动词放到整句提问的最后（即句子末尾）。\n- 折解后再需要你补充一些内容，补充要求为：作为一个零售品导购美食营养搭配专家，根据客户的提问，同时从问题表面以及客户潜在购物心理以及潜在购物需求你会如何回答用户当前的问题？把你的答案折成适合搜索引擎的关键字并补充在客户提问里，此处你不做任何咨询类服务。\n- 关键字折得越多越好，关键字一定是要可以覆盖用户的提问、包括同义词、语义相近同时请记得把你自己如何回答这个问题的答案也折成关键字加入到改写的query里。",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-31T15:58:06.617Z"),
+    updatedDate: ISODate("2025-04-23T13:42:13.872Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67eabc7ca436f3043c6d2dc5"),
+    configMainId: NumberLong("4490377"),
+    sequence: NumberInt("0"),
+    stepDescription: "对原提示语进行打标签、折关键字",
+    type: NumberInt("4"),
+    enabled: false,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-31T15:58:06.617Z"),
+    updatedDate: ISODate("2025-04-23T13:42:13.874Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);
+db.getCollection("ChatConfigDetail").insert([ {
+    _id: ObjectId("67eabc7ca436f3043c6d2dc6"),
+    configMainId: NumberLong("4490377"),
+    sequence: NumberInt("0"),
+    stepDescription: "重排序",
+    type: NumberInt("5"),
+    enabled: true,
+    stepPrompt: "",
+    temperature: 0.1,
+    createdDate: ISODate("2025-03-31T15:58:06.617Z"),
+    updatedDate: ISODate("2025-04-23T13:42:13.876Z"),
+    createdBy: "admin",
+    userName: "admin",
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigDetail"
+} ]);

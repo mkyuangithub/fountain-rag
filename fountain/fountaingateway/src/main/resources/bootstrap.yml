@@ -1,0 +1,4 @@
+logging:
+  level:
+    com.alibaba.cloud.nacos: debug
+    com.alibaba.nacos: debug

@@ -1,0 +1,71 @@
+fountain:
+  sequence:
+    worker-id: 1
+  ai:
+    dify:
+      workflowUrl: http://localhost:8300/v1/workflows/run
+      chatflowUrl: http://localhost:8300/v1/chat-messages
+      conversationUrl: http://localhost:8300/v1/conversations
+    ocr:
+      ocrUrl: http://localhost:5001/ocr
+    embedding:
+      #embeddingUrl: http://localhost:11434/api/embed
+      embeddingUrl: http://localhost:5000/getBGEEmbedding
+      vlEmbeddingUrl: http://localhost:5000/getBGEVLEmbedding
+      embeddingApiKey: ${X_API_KEY}
+      model: mxbai-embed-large
+    rerank:
+      rerankUrl: http://localhost:5000/rank
+      rerankApiKey: ${X_API_KEY}
+  minio:
+    url: http://localhost:9000
+    access-key: 17pw0lKIgo56PYOwZ4OR
+    secret-key: mMUiKH6WsmfNVqkrVjwFtAPGxLY2jPAFNQly814p
+    bucket-name: fountain-archive
+  #secretKey为AES密钥必须为32字节
+  secretKey: ${FOUNTAIN_SECRET_KEY}
+  signature: ${FOUNTAIN_SIGNATURE}
+  vectordb:
+    uri: http://localhost:6333/collections
+    apiKey: ${FOUNTAIN_API_KEY}
+  okhttp:
+    client_proxy: false
+    connection_timeout: 30000
+    read_timeout: 30000
+    write_timeout: 30000    
+spring:
+  elasticsearch:
+    rest:
+      uris: localhost:9200
+      username: elastic
+      password: ${FOUNTAIN_ES_PASSWORD}
+  data:
+    elasticsearch:
+      repositories:
+        enabled: false
+    mongodb:
+      #uri: mongodb://fountain:111111@localhost:27017/fountain?authSource=fountain&maxPoolSize=3&minPoolSize=1&maxIdleTimeMS=30000&connectTimeoutMS=30000&socketTimeoutMS=30000      
+      uri: mongodb://fountain:111111@localhost:27017/fountain?authSource=fountain   
+  redis:
+    timeout: 10000
+    password: password_1
+    nodes: localhost:7001
+    redisson:
+      #nodes: redis://10.1.0.41:27001,redis://10.1.0.41:27002,redis://10.1.0.41:27003
+      nodes: redis://localhost:7001
+    sentinel: 
+      nodes: 
+      #nodes: localhost:27001,localhost:27002,localhost:27003
+      master: master1
+      subscriptionsPerConnection: 200
+      subscriptionConnectionPoolSize: 200
+    database: 0
+    switchFlag: 1
+    jedis:
+      pool:
+        max-active: 200
+        max-wait: 200
+        max-idle: 200
+        min-idle: 1
+        shutdown-timeout: 10000
+        timeBetweenEvictionRunsMillis: 10000

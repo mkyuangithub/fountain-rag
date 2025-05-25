@@ -1,0 +1,93 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+.metadata
+.metadata/
+.plugin/
+.plugins/
+settings/
+.project
+.classpath
+.factorypath
+target/
+*.tar.gz
+*.rar
+logs/
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+.DS_Store
+bin/
+bootstrap.yml
+# IntelliJ IDEA 生成的文件夹
+out/
+.idea/
+*.iml
+
+# NetBeans 生成的文件夹
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# Gradle 生成的文件夹
+build/
+.gradle/
+buildSrc/
+
+# Spring Boot 生成的文件夹
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# 日志文件
+*.log
+logs/
+
+# 临时文件
+*.swp
+*~
+*.tmp
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**
+!**/src/test/**### STS ###
+.apt_generated
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/### VS Code ###
+.vscode/.DS_Store
+
+.idea
+.DS_Store
+
+*/.DS_Store

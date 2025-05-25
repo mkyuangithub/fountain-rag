@@ -1,0 +1,114 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : fountain@localhost
+ Source Server Type    : MongoDB
+ Source Server Version : 40201
+ Source Host           : localhost:27017
+ Source Schema         : fountain
+
+ Target Server Type    : MongoDB
+ Target Server Version : 40201
+ File Encoding         : 65001
+
+ Date: 25/05/2025 11:26:37
+*/
+
+
+// ----------------------------
+// Collection structure for DifyConfig
+// ----------------------------
+db.getCollection("DifyConfig").drop();
+db.createCollection("DifyConfig");
+db.getCollection("DifyConfig").createIndex({
+    createdDate: NumberInt("-1")
+}, {
+    name: "createdDate_-1"
+});
+db.getCollection("DifyConfig").createIndex({
+    updatedDate: NumberInt("-1")
+}, {
+    name: "updatedDate_-1"
+});
+db.getCollection("DifyConfig").createIndex({
+    sequenceNo: NumberInt("1")
+}, {
+    name: "sequenceNo_1",
+    unique: true
+});
+
+// ----------------------------
+// Documents of DifyConfig
+// ----------------------------
+db.getCollection("DifyConfig").insert([ {
+    _id: ObjectId("6820a93d4ee4ca7d71f205b1"),
+    sequenceNo: "1",
+    description: "零售智能导购rewrite流程",
+    responseMode: "blocking",
+    user: "admin",
+    userName: "admin",
+    apiKey: "R7eEJ-MT9OYXgBfejckXVg3wS1ZbS7n4fNw-Upj7Vps",
+    createdDate: ISODate("2025-05-11T13:42:21.578Z"),
+    updatedDate: ISODate("2025-05-11T13:42:21.578Z"),
+    _class: "com.mkyuan.fountainbase.ai.bean.DifyBean"
+} ]);
+db.getCollection("DifyConfig").insert([ {
+    _id: ObjectId("68219dadfa35f4708ace8af8"),
+    sequenceNo: "2",
+    description: "零售智能导购的聊天主流程",
+    responseMode: "streaming",
+    user: "admin",
+    userName: "admin",
+    apiKey: "K54QrMjB2Od3a80X89zm7fYNpw0OmJL5jZ3x2E4caQQ",
+    createdDate: ISODate("2025-05-12T07:05:17.658Z"),
+    updatedDate: ISODate("2025-05-12T07:05:17.658Z"),
+    _class: "com.mkyuan.fountainbase.ai.bean.DifyBean"
+} ]);
+db.getCollection("DifyConfig").insert([ {
+    _id: ObjectId("682472aa063650084fa2438f"),
+    sequenceNo: "3",
+    description: "不做rewrite直接把原输入返回",
+    responseMode: "blocking",
+    user: "admin",
+    userName: "admin",
+    apiKey: "O_eA6tuSNeOh55JkhtbgwDEeeIHDrgDZ6sxBXrd6t78",
+    createdDate: ISODate("2025-05-14T10:38:34.905Z"),
+    updatedDate: ISODate("2025-05-14T10:38:34.905Z"),
+    _class: "com.mkyuan.fountainbase.ai.bean.DifyBean"
+} ]);
+db.getCollection("DifyConfig").insert([ {
+    _id: ObjectId("6825a41385aa477687cee3d9"),
+    sequenceNo: "4",
+    description: "员工内部知识库",
+    responseMode: "blocking",
+    user: "admin",
+    userName: "admin",
+    apiKey: "qAhdbjoKo78B7-awnYCocY2oxpl9oD7Jt-_3BBIpKxE",
+    createdDate: ISODate("2025-05-15T08:21:39.058Z"),
+    updatedDate: ISODate("2025-05-15T08:21:39.058Z"),
+    _class: "com.mkyuan.fountainbase.ai.bean.DifyBean"
+} ]);
+db.getCollection("DifyConfig").insert([ {
+    _id: ObjectId("6825a4d585aa477687cee3da"),
+    sequenceNo: "5",
+    description: "SmartQA聊天主流程",
+    responseMode: "streaming",
+    user: "admin",
+    userName: "admin",
+    apiKey: "QeLrHpifyuarj4Kxnr06cgoxieUQHc3NaHoXG3d_Igg",
+    createdDate: ISODate("2025-05-15T08:24:53.227Z"),
+    updatedDate: ISODate("2025-05-15T08:24:53.227Z"),
+    _class: "com.mkyuan.fountainbase.ai.bean.DifyBean"
+} ]);
+db.getCollection("DifyConfig").insert([ {
+    _id: ObjectId("68283f78009d0805f6d5d6cf"),
+    sequenceNo: "6",
+    description: "各种食谱做法的Rewrite",
+    responseMode: "blocking",
+    user: "admin",
+    userName: "admin",
+    apiKey: "CDdTH0dozwec9ij0AUE9evkzxBupJoXJGyliDATIBxg",
+    createdDate: ISODate("2025-05-17T07:49:12.017Z"),
+    updatedDate: ISODate("2025-05-17T07:49:12.017Z"),
+    _class: "com.mkyuan.fountainbase.ai.bean.DifyBean"
+} ]);

@@ -1,0 +1,53 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : fountain@localhost
+ Source Server Type    : MongoDB
+ Source Server Version : 40201
+ Source Host           : localhost:27017
+ Source Schema         : fountain
+
+ Target Server Type    : MongoDB
+ Target Server Version : 40201
+ File Encoding         : 65001
+
+ Date: 25/05/2025 11:27:58
+*/
+
+
+// ----------------------------
+// Collection structure for UserKnowledgeFailResult
+// ----------------------------
+db.getCollection("UserKnowledgeFailResult").drop();
+db.createCollection("UserKnowledgeFailResult");
+db.getCollection("UserKnowledgeFailResult").createIndex({
+    createdDate: NumberInt("-1")
+}, {
+    name: "createdDate_-1"
+});
+db.getCollection("UserKnowledgeFailResult").createIndex({
+    updatedDate: NumberInt("-1")
+}, {
+    name: "updatedDate_-1"
+});
+db.getCollection("UserKnowledgeFailResult").createIndex({
+    knowledgeRepoId: NumberInt("1")
+}, {
+    name: "knowledgeRepoId_1"
+});
+db.getCollection("UserKnowledgeFailResult").createIndex({
+    fileId: NumberInt("1")
+}, {
+    name: "fileId_1"
+});
+db.getCollection("UserKnowledgeFailResult").createIndex({
+    handled: NumberInt("1")
+}, {
+    name: "handled_1"
+});
+db.getCollection("UserKnowledgeFailResult").createIndex({
+    contentMd5: NumberInt("1")
+}, {
+    name: "contentMd5_1",
+    unique: true
+});

@@ -1,0 +1,663 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : fountain@localhost
+ Source Server Type    : MongoDB
+ Source Server Version : 40201
+ Source Host           : localhost:27017
+ Source Schema         : fountain
+
+ Target Server Type    : MongoDB
+ Target Server Version : 40201
+ File Encoding         : 65001
+
+ Date: 25/05/2025 11:27:14
+*/
+
+
+// ----------------------------
+// Collection structure for RetrieveRateTest
+// ----------------------------
+db.getCollection("RetrieveRateTest").drop();
+db.createCollection("RetrieveRateTest");
+
+// ----------------------------
+// Documents of RetrieveRateTest
+// ----------------------------
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1a6956a5645878f54891"),
+    question: "我是租科技城的住户，请问一下，这附近有什么吃的地方？",
+    hitAnswer: "瞪眼牛煎包",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:22:33.73Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1a7156a5645878f54892"),
+    question: "作为科技城的租户，想了解周边有哪些餐饮选择？",
+    hitAnswer: "瞪眼牛煎包",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:22:41.391Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1a7856a5645878f54893"),
+    question: "请问科技城附近有什么地方可以吃饭？我是这里的住户。",
+    hitAnswer: "瞪眼牛煎包",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:22:48.49Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1a7f56a5645878f54894"),
+    question: "我住在科技城，能告诉我附近哪里有吃的吗？",
+    hitAnswer: "瞪眼牛煎包",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:22:55.572Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1a8656a5645878f54895"),
+    question: "科技城周边有什么好吃的地方？我是这里的租户。",
+    hitAnswer: "瞪眼牛煎包",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:23:02.562Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1a8d56a5645878f54896"),
+    question: "我在科技城租房住，附近有什么餐厅推荐吗？",
+    hitAnswer: "瞪眼牛煎包",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:23:09.899Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1a9456a5645878f54897"),
+    question: "请问一下，科技城这边住户去哪里吃饭比较方便？",
+    hitAnswer: "瞪眼牛煎包",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:23:16.769Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1a9b56a5645878f54898"),
+    question: "作为科技城的住户，想知道附近有哪些吃饭的选择？",
+    hitAnswer: "瞪眼牛煎包",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:23:23.878Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1aa356a5645878f54899"),
+    question: "我租住在科技城，想了解一下这附近的餐饮场所有哪些？",
+    hitAnswer: "瞪眼牛煎包",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:23:31.707Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1ab256a5645878f5489a"),
+    question: "科技城租户想问，这周边有什么地方可以解决吃饭问题？",
+    hitAnswer: "瞪眼牛煎包",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:23:46.61Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1ab956a5645878f5489b"),
+    question: "我住在凌波苑，附近有什么小学？",
+    hitAnswer: "浦东新区临港外国语小学",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:23:53.515Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1ac156a5645878f5489c"),
+    question: "凌波苑周边有哪些小学？",
+    hitAnswer: "浦东新区临港外国语小学",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:24:01.457Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1ac756a5645878f5489d"),
+    question: "请问凌波苑附近的小学有哪些？",
+    hitAnswer: "浦东新区临港外国语小学",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:24:07.984Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1ad256a5645878f5489e"),
+    question: "我家在凌波苑，想知道周围有什么小学",
+    hitAnswer: "浦东新区临港外国语小学",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:24:18.463Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1ad956a5645878f5489f"),
+    question: "凌波苑附近的小学情况如何？",
+    hitAnswer: "浦东新区临港外国语小学",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:24:25.496Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1ae056a5645878f548a0"),
+    question: "住在凌波苑，想了解一下附近小学有哪些",
+    hitAnswer: "浦东新区临港外国语小学",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:24:32.396Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1ae756a5645878f548a1"),
+    question: "有谁知道凌波苑周边的小学？",
+    hitAnswer: "浦东新区临港外国语小学",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:24:39.084Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1aee56a5645878f548a2"),
+    question: "凌波苑这边有什么小学？我住在这里",
+    hitAnswer: "浦东新区临港外国语小学",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:24:46.54Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1af656a5645878f548a3"),
+    question: "我是凌波苑的居民，附近小学有哪些？",
+    hitAnswer: "浦东新区临港外国语小学",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:24:54.01Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1afd56a5645878f548a4"),
+    question: "请问下凌波苑附近都有什么小学？我住这里",
+    hitAnswer: "浦东新区临港外国语小学",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:25:01.173Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1b0356a5645878f548a5"),
+    question: "我住在芳菲苑，附近有什么小学？",
+    hitAnswer: "浦东新区临港外国语小学",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:25:07.788Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1b0a56a5645878f548a6"),
+    question: "芳菲苑周边有哪些小学？",
+    hitAnswer: "浦东新区临港外国语小学",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:25:14.891Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1b1156a5645878f548a7"),
+    question: "请问芳菲苑附近的小学有哪些？",
+    hitAnswer: "浦东新区临港外国语小学",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:25:21.902Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1b1856a5645878f548a8"),
+    question: "住在芳菲苑，想知道周围小学情况",
+    hitAnswer: "浦东新区临港外国语小学",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:25:28.933Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1b2156a5645878f548a9"),
+    question: "芳菲苑附近小学有哪几所？",
+    hitAnswer: "浦东新区临港外国语小学",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:25:37.373Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1b2956a5645878f548aa"),
+    question: "我家在芳菲苑，想了解一下附近的小学",
+    hitAnswer: "浦东新区临港外国语小学",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:25:45.211Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1b3056a5645878f548ab"),
+    question: "有谁知道芳菲苑周边的小学情况？",
+    hitAnswer: "浦东新区临港外国语小学",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:25:52.274Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1b3856a5645878f548ac"),
+    question: "芳菲苑这边有什么小学？求推荐",
+    hitAnswer: "浦东新区临港外国语小学",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:26:00.282Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1b3f56a5645878f548ad"),
+    question: "住芳菲苑的话，附近小学有哪些选择？",
+    hitAnswer: "浦东新区临港外国语小学",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:26:07.384Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1b4756a5645878f548ae"),
+    question: "请问下芳菲苑附近都有哪些小学？",
+    hitAnswer: "浦东新区临港外国语小学",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:26:15.403Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1b4e56a5645878f548af"),
+    question: "我是科技城的用户，家里马桶坏了，找谁啊？",
+    hitAnswer: "33759918",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:26:22.328Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1b5556a5645878f548b0"),
+    question: "科技城这边住户，马桶出问题了，应该联系谁来修？",
+    hitAnswer: "33759918",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:26:29.448Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1b5c56a5645878f548b1"),
+    question: "请问科技城的居民马桶坏掉了该找哪位维修？",
+    hitAnswer: "33759918",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:26:36.442Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1b6656a5645878f548b2"),
+    question: "我家在科技城，卫生间马桶不能用了，找谁修理？",
+    hitAnswer: "33759918",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:26:46.026Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1b6c56a5645878f548b3"),
+    question: "科技城用户求助，家里的马桶坏了，该联系谁？",
+    hitAnswer: "33759918",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:26:52.852Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1b7656a5645878f548b4"),
+    question: "马桶坏了，科技城这边的用户该找谁来处理？",
+    hitAnswer: "33759918",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:27:02.571Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1b7d56a5645878f548b5"),
+    question: "作为科技城的住户，家中马桶出故障了，该找什么人来修？",
+    hitAnswer: "33759918",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:27:09.796Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1b8556a5645878f548b6"),
+    question: "谁能帮科技城的用户修理坏掉的马桶？",
+    hitAnswer: "33759918",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:27:17.525Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1b8c56a5645878f548b7"),
+    question: "科技城住宅马桶坏了，需要联系哪个部门或人员？",
+    hitAnswer: "33759918",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:27:24.654Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1b9456a5645878f548b8"),
+    question: "家住科技城，马桶出现故障，请问应该找谁来维修？",
+    hitAnswer: "33759918",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:27:32.343Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1ba356a5645878f548b9"),
+    question: "我是芳菲苑的租户，交水费在哪？",
+    hitAnswer: "泥城营业分部电话",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:27:47.668Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1bae56a5645878f548ba"),
+    question: "芳菲苑租户想交水费，请问在哪里交？",
+    hitAnswer: "泥城营业分部电话",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:27:58.541Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1bb656a5645878f548bb"),
+    question: "请问芳菲苑的水费在哪里缴纳？我是这里的租户。",
+    hitAnswer: "泥城营业分部电话",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:28:06.504Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1bbe56a5645878f548bc"),
+    question: "作为芳菲苑的租户，我该去哪里交水费？",
+    hitAnswer: "泥城营业分部电话",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:28:14.761Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1bc756a5645878f548bd"),
+    question: "我租住在芳菲苑，不知道水费要去哪里缴？",
+    hitAnswer: "泥城营业分部电话",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:28:23.883Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1bd056a5645878f548be"),
+    question: "芳菲苑的水费缴纳点在哪？我是这里的租户。",
+    hitAnswer: "泥城营业分部电话",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:28:32.807Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1bdf56a5645878f548bf"),
+    question: "我在芳菲苑租房，请问水费缴纳地点是哪里？",
+    hitAnswer: "泥城营业分部电话",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:28:47.918Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1be856a5645878f548c0"),
+    question: "水费缴纳地点在哪里？我是芳菲苑的租户。",
+    hitAnswer: "泥城营业分部电话",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:28:56.434Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1bf156a5645878f548c1"),
+    question: "请问在芳菲苑租房的租户应该去哪里交水费？",
+    hitAnswer: "泥城营业分部电话",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:29:05.21Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc1bf956a5645878f548c2"),
+    question: "我想知道作为芳菲苑租户，应该在哪里缴纳水费？",
+    hitAnswer: "泥城营业分部电话",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T18:29:13.085Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc4268842e5d7d5b3b86c0"),
+    question: "科技城停车位收费，找谁？",
+    hitAnswer: "58098879",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:13:12.043Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc4270842e5d7d5b3b86c1"),
+    question: "请问科技城的停车收费问题要找哪个部门？",
+    hitAnswer: "58098879",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:13:20.814Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc4278842e5d7d5b3b86c2"),
+    question: "科技城停车费用有疑问，应该联系什么号码？",
+    hitAnswer: "58098879",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:13:28.902Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc4280842e5d7d5b3b86c3"),
+    question: "在科技城停车要交钱，不知道找谁处理？",
+    hitAnswer: "58098879",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:13:36.17Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc4287842e5d7d5b3b86c4"),
+    question: "科技城的车位收费标准想咨询一下，打哪个电话？",
+    hitAnswer: "58098879",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:13:43.488Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc428f842e5d7d5b3b86c5"),
+    question: "我想了解一下科技城停车收费的事情，该联系谁呢？",
+    hitAnswer: "58098879",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:13:51.075Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc4296842e5d7d5b3b86c6"),
+    question: "科技城停车要收费吗？找谁问比较好？",
+    hitAnswer: "58098879",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:13:58.948Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc429d842e5d7d5b3b86c7"),
+    question: "在科技城停车被收费了，有问题应该找哪个电话投诉？",
+    hitAnswer: "58098879",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:14:05.846Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc42a5842e5d7d5b3b86c8"),
+    question: "科技城的停车位为什么要收费？想问一下具体情况，联系谁？",
+    hitAnswer: "58098879",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:14:13.223Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc42b6842e5d7d5b3b86c9"),
+    question: "科技城停车收费标准是多少？找谁咨询比较好？",
+    hitAnswer: "58098879",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:14:30.722Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc42bd842e5d7d5b3b86ca"),
+    question: "我是熙岚苑的，家里橱门坏了找谁？",
+    hitAnswer: "33759918",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:14:37.879Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc42c5842e5d7d5b3b86cb"),
+    question: "熙岚苑的住户，家里厨房橱柜门坏掉了应该联系谁修理？",
+    hitAnswer: "33759918",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:14:45.059Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc42cc842e5d7d5b3b86cc"),
+    question: "我住在熙岚苑，厨房的橱柜门出问题了，请问找哪个部门报修？",
+    hitAnswer: "33759918",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:14:52.587Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc42d8842e5d7d5b3b86cd"),
+    question: "熙岚苑业主，厨房橱门坏了，谁能来修一下？",
+    hitAnswer: "33759918",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:15:04.06Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc42de842e5d7d5b3b86ce"),
+    question: "请问熙岚苑的橱柜门损坏了该打哪个电话报修？",
+    hitAnswer: "33759918",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:15:10.911Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc42e6842e5d7d5b3b86cf"),
+    question: "我家在熙岚苑，橱柜门坏掉了，该联系谁来处理？",
+    hitAnswer: "33759918",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:15:18.463Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc42ee842e5d7d5b3b86d0"),
+    question: "熙岚苑的住户想问一下，厨房橱门坏了找哪个部门？",
+    hitAnswer: "33759918",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:15:26.765Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc42f5842e5d7d5b3b86d1"),
+    question: "我是熙岚苑的业主，厨房的橱柜门坏了，有没有维修电话？",
+    hitAnswer: "33759918",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:15:33.946Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc42fe842e5d7d5b3b86d2"),
+    question: "熙岚苑小区，家里的橱柜门出故障了，该找谁来修？",
+    hitAnswer: "33759918",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:15:42.96Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc4307842e5d7d5b3b86d3"),
+    question: "我家住熙岚苑，厨房橱门坏了要怎么联系维修人员？",
+    hitAnswer: "33759918",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:15:51.253Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc430f842e5d7d5b3b86d4"),
+    question: "我是凌波苑的，进楼用的门禁卡丢了，怎么办？",
+    hitAnswer: "50元",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:15:59.824Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc4318842e5d7d5b3b86d5"),
+    question: "我是凌波苑的，进楼用的门禁卡丢了，怎么办？",
+    hitAnswer: "50元",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:16:08.148Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc4320842e5d7d5b3b86d6"),
+    question: "我住凌波苑，门禁卡不见了，请问补办要多少钱？",
+    hitAnswer: "50元",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:16:16.171Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc432f842e5d7d5b3b86d7"),
+    question: "凌波苑的住户，我的门禁卡找不到了，该怎么处理？",
+    hitAnswer: "50元",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:16:31.18Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc4337842e5d7d5b3b86d8"),
+    question: "我家在凌波苑，昨天不小心把门禁卡弄丢了，现在进不去楼，怎么解决？",
+    hitAnswer: "50元",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:16:39.95Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc4340842e5d7d5b3b86d9"),
+    question: "凌波苑的门禁卡掉了，请问补办流程是什么？需要多少钱？",
+    hitAnswer: "50元",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:16:48.647Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc4349842e5d7d5b3b86da"),
+    question: "我是凌波苑业主，门禁卡不知道放哪了，想问一下补办费用是多少？",
+    hitAnswer: "50元",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:16:57.748Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc4353842e5d7d5b3b86db"),
+    question: "凌波苑的住户，进楼的卡丢失了，补办要花多少钱啊？",
+    hitAnswer: "50元",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:17:07.418Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc435f842e5d7d5b3b86dc"),
+    question: "我住在凌波苑，进单元门的卡弄丢了，请问怎么补办？要多少钱？",
+    hitAnswer: "50元",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:17:19.235Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc4368842e5d7d5b3b86dd"),
+    question: "凌波苑的，我的门禁卡不小心丢了，想问一下重新办一张要多少钱？",
+    hitAnswer: "50元",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:17:28.115Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc4370842e5d7d5b3b86de"),
+    question: "我是凌波苑的住户，门禁卡遗失了，补办一张新的费用是多少？",
+    hitAnswer: "50元",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:17:36.933Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc4377842e5d7d5b3b86df"),
+    question: "我是芳菲苑的，附近有什么医院吗？",
+    hitAnswer: "上海市第六人民医院",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:17:43.782Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc437e842e5d7d5b3b86e0"),
+    question: "请问芳菲苑周边有没有医院啊？",
+    hitAnswer: "上海市第六人民医院",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:17:50.921Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc4386842e5d7d5b3b86e1"),
+    question: "我住在芳菲苑，想知道附近医院在哪里？",
+    hitAnswer: "上海市第六人民医院",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:17:58.129Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc438e842e5d7d5b3b86e2"),
+    question: "芳菲苑这边有医院吗？急着找一下",
+    hitAnswer: "上海市第六人民医院",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:18:06.057Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc4395842e5d7d5b3b86e3"),
+    question: "从芳菲苑出发，最近的医院是哪家？",
+    hitAnswer: "上海市第六人民医院",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:18:13.762Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc439e842e5d7d5b3b86e4"),
+    question: "我家在芳菲苑，孩子发烧了，附近哪里有医院？",
+    hitAnswer: "上海市第六人民医院",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:18:22.48Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc43a5842e5d7d5b3b86e5"),
+    question: "芳菲苑附近的医疗机构有哪些？",
+    hitAnswer: "上海市第六人民医院",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:18:29.962Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc43b0842e5d7d5b3b86e6"),
+    question: "我刚搬到芳菲苑，想了解一下周边有什么医院",
+    hitAnswer: "上海市第六人民医院",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:18:40.404Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc43b8842e5d7d5b3b86e7"),
+    question: "芳菲苑这个小区旁边有医院吗？",
+    hitAnswer: "上海市第六人民医院",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:18:48.566Z")
+} ]);
+db.getCollection("RetrieveRateTest").insert([ {
+    _id: ObjectId("67cc43c2842e5d7d5b3b86e8"),
+    question: "我爸妈住芳菲苑，想知道附近看病方便吗？有医院吗？",
+    hitAnswer: "上海市第六人民医院",
+    hit: NumberInt("1"),
+    createdDate: ISODate("2025-03-08T21:18:58.372Z")
+} ]);

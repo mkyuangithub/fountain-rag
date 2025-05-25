@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="baidu-site-verification" content="" />
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="Keywords" Content="">
+    <meta name="Description" Content="">
+	<title>fountain</title>
+    <style>
+        #loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -21px;
+            margin-left: -21px;
+            width: 42px;
+            height: 42px;
+            -webkit-animation: loading 5s infinite linear;
+            -moz-animation: loading 5s infinite linear;
+            -ms-animation: loading 5s infinite linear;
+            animation: loading 5s infinite linear;
+        }
+
+        #loading span {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background: red;
+            display: block;
+            -webkit-animation: loading_span 1s infinite linear;
+            -moz-animation: loading_span 1s infinite linear;
+            -ms-animation: loading_span 1s infinite linear;
+            animation: loading_span 1s infinite linear;
+        }
+
+        #loading span:nth-child(1) {
+            background: #2ecc71;
+
+        }
+
+        #loading span:nth-child(2) {
+            left: 22px;
+            background: #9b59b6;
+            -webkit-animation-delay: .2s;
+            -moz-animation-delay: .2s;
+            -ms-animation-delay: .2s;
+            animation-delay: .2s;
+
+        }
+
+        #loading span:nth-child(3) {
+            top: 22px;
+            background: #3498db;
+            -webkit-animation-delay: .4s;
+            -moz-animation-delay: .4s;
+            -ms-animation-delay: .4s;
+            animation-delay: .4s;
+        }
+
+        #loading span:nth-child(4) {
+            top: 22px;
+            left: 22px;
+            background: #f1c40f;
+            -webkit-animation-delay: .6s;
+            -moz-animation-delay: .6s;
+            -ms-animation-delay: .6s;
+            animation-delay: .6s;
+        }
+
+        @-webkit-keyframes loading {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes loading_span {
+            0% {
+                -webkit-transform: scale(1);
+            }
+            50% {
+                -webkit-transform: scale(0.5);
+            }
+            100% {
+                -webkit-transform: scale(1);
+            }
+        }
+
+
+        @-moz-keyframes loading {
+            from {
+                -moz-transform: rotate(0deg);
+            }
+            to {
+                -moz-transform: rotate(360deg);
+            }
+        }
+
+        @-moz-keyframes loading_span {
+            0% {
+                -moz-transform: scale(1);
+            }
+            50% {
+                -moz-transform: scale(0.5);
+            }
+            100% {
+                -moz-transform: scale(1);
+            }
+        }
+
+        @-ms-keyframes loading {
+            from {
+                -ms-transform: rotate(0deg);
+            }
+            to {
+                -ms-transform: rotate(360deg);
+            }
+        }
+
+        @-ms-keyframes loading_span {
+            0% {
+                -ms-transform: scale(1);
+            }
+            50% {
+                -ms-transform: scale(0.5);
+            }
+            100% {
+                -ms-transform: scale(1);
+            }
+        }
+
+        @-ms-keyframes loading {
+            from {
+                -ms-transform: rotate(0deg);
+            }
+            to {
+                -ms-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes loading_span {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(0.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+<h1 style="display: none;">
+    
+</h1>
+<div id="loading">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div id="root"></div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

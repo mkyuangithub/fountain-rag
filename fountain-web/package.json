@@ -1,0 +1,45 @@
+{
+	"name": "xuanyuan-admin",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"start": "vite",
+		"start:dev": "vite --mode dev",
+		"build": "node --max_old_space_size=4096 node_modules/vite/bin/vite.js build --mode pro"
+	},
+	"dependencies": {
+		"@ant-design/icons-vue": "^7.0.1",
+		"@microsoft/fetch-event-source": "^2.0.1",
+		"@vavt/v3-extension": "^1.2.4",
+		"@vueuse/core": "^11.1.0",
+		"ant-design-vue": "^4.1.2",
+		"axios": "^1.6.8",
+		"crypto-js": "^4.2.0",
+		"dayjs": "^1.11.10",
+		"echarts": "^5.5.0",
+		"event-source-polyfill": "^1.0.31",
+		"html2canvas": "^1.4.1",
+		"md-editor-v3": "^4.17.4",
+		"monaco-ace-tokenizer": "^0.2.3",
+		"monaco-editor": "^0.52.2",
+		"monaco-editor-webpack-plugin": "^7.1.0",
+		"pinia": "^2.1.7",
+		"sortablejs": "^1.15.2",
+		"terser": "^5.30.3",
+		"typed.js": "^2.1.0",
+		"vue": "^3.4.21",
+		"vue-cropper": "^1.1.4",
+		"vue-i18n": "^9.14.3",
+		"vue-photo-album": "^1.2.4",
+		"vue-router": "^4.3.0",
+		"vue-types": "^5.1.3",
+		"vue3-colorpicker": "^2.3.0",
+		"vue3-perfect-scrollbar": "^2.0.0",
+		"vue3-scroll-seamless": "^1.0.6"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-vue": "^5.0.4",
+		"vite": "^5.4.14"
+	}
+}

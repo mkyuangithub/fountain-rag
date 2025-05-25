@@ -1,0 +1,91 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : fountain@localhost
+ Source Server Type    : MongoDB
+ Source Server Version : 40201
+ Source Host           : localhost:27017
+ Source Schema         : fountain
+
+ Target Server Type    : MongoDB
+ Target Server Version : 40201
+ File Encoding         : 65001
+
+ Date: 25/05/2025 11:27:29
+*/
+
+
+// ----------------------------
+// Collection structure for UserInfo
+// ----------------------------
+db.getCollection("UserInfo").drop();
+db.createCollection("UserInfo");
+db.getCollection("UserInfo").createIndex({
+    userName: NumberInt("1")
+}, {
+    name: "userName_1",
+    unique: true
+});
+db.getCollection("UserInfo").createIndex({
+    type: NumberInt("1")
+}, {
+    name: "type_1"
+});
+db.getCollection("UserInfo").createIndex({
+    createdDate: NumberInt("-1")
+}, {
+    name: "createdDate_-1"
+});
+db.getCollection("UserInfo").createIndex({
+    updatedDate: NumberInt("-1")
+}, {
+    name: "updatedDate_-1"
+});
+db.getCollection("UserInfo").createIndex({
+    createdBy: NumberInt("1")
+}, {
+    name: "createdBy_1"
+});
+
+// ----------------------------
+// Documents of UserInfo
+// ----------------------------
+db.getCollection("UserInfo").insert([ {
+    _id: ObjectId("67a33384576b0000e1004030"),
+    userName: "admin",
+    password: "96e79218965eb72c92a549dd5a330112",
+    type: 1,
+    createdBy: "admin",
+    createdDate: ISODate("2025-02-05T09:46:44.401Z"),
+    updatedDate: ISODate("2025-02-05T09:46:44.401Z")
+} ]);
+db.getCollection("UserInfo").insert([ {
+    _id: ObjectId("67b6ce8c6d4d3c140337ff62"),
+    userName: "useradmin1",
+    password: "96e79218965eb72c92a549dd5a330112",
+    type: NumberInt("2"),
+    createdBy: "admin",
+    createdDate: ISODate("2025-02-20T06:41:16.338Z"),
+    updatedDate: ISODate("2025-02-20T06:41:16.338Z"),
+    _class: "com.mkyuan.fountainbase.user.bean.UserInfo"
+} ]);
+db.getCollection("UserInfo").insert([ {
+    _id: ObjectId("67b9a2ee9785ba33f084cbfb"),
+    userName: "dddd",
+    password: "0b4e7a0e5fe84ad35fb5f95b9ceeac79",
+    type: NumberInt("2"),
+    createdBy: "admin",
+    createdDate: ISODate("2025-02-22T10:11:58.793Z"),
+    updatedDate: ISODate("2025-02-22T10:11:58.793Z"),
+    _class: "com.intelkry.fountainbase.user.bean.UserInfo"
+} ]);
+db.getCollection("UserInfo").insert([ {
+    _id: ObjectId("67bc6799b18517281a038607"),
+    userName: "chatuser1",
+    password: "96e79218965eb72c92a549dd5a330112",
+    type: NumberInt("3"),
+    createdBy: "admin",
+    createdDate: ISODate("2025-02-24T12:35:37.36Z"),
+    updatedDate: ISODate("2025-02-24T12:35:37.36Z"),
+    _class: "com.intelkry.fountainbase.user.bean.UserInfo"
+} ]);

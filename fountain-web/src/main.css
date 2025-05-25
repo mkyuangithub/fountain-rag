@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'yt';
+    src: url('/assets/fonts/395e7e32dedf4dd7db56a3d45cad0b2c.woff2') format('woff2'),
+        url('/assets/fonts/395e7e32dedf4dd7db56a3d45cad0b2c.woff') format('woff'),
+        url('/assets/fonts/395e7e32dedf4dd7db56a3d45cad0b2c.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    /* font-family: yt, system-ui !important;*/
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+
+}
+
+:root {
+    --primary-color: rgba(37, 99, 232, 1);
+    --background-color: #23262F;
+    --body-color: #f7f8fa;
+    --body-border-color: #ECECEC;
+}
+
+.ant-btn-primary {
+    box-shadow: none;
+}

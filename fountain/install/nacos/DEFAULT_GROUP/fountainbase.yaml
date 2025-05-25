@@ -1,0 +1,29 @@
+server:
+  port: 9100
+  tomcat:
+    max-http-post-size: 52428800
+#    #最小线程数
+    min-spare-threads: 300
+    #最大线程数
+    max-threads: 500
+    #最大链接数
+    max-connections: 500
+    #最大等待队列长度
+    accept-count: 500  
+#  connection-timeout: 10000
+  max-http-header-size: 1024000
+logging:
+  config: classpath:log4j2.xml
+spring:  
+  application:
+    name: fountainbase
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        name-space: local
+        prefer-ip-address: false    # 设置为 false，使用主机名  
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB

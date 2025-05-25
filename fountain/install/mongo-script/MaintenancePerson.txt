@@ -1,0 +1,86 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : fountain@localhost
+ Source Server Type    : MongoDB
+ Source Server Version : 40201
+ Source Host           : localhost:27017
+ Source Schema         : fountain
+
+ Target Server Type    : MongoDB
+ Target Server Version : 40201
+ File Encoding         : 65001
+
+ Date: 25/05/2025 11:27:03
+*/
+
+
+// ----------------------------
+// Collection structure for MaintenancePerson
+// ----------------------------
+db.getCollection("MaintenancePerson").drop();
+db.createCollection("MaintenancePerson");
+
+// ----------------------------
+// Documents of MaintenancePerson
+// ----------------------------
+db.getCollection("MaintenancePerson").insert([ {
+    _id: ObjectId("68175db34bc859a6b9cea22b"),
+    name: "李敏",
+    contactPhone: "1111111111111",
+    arrangement: "周二早上9:00~周三下午16:00已预约"
+} ]);
+db.getCollection("MaintenancePerson").insert([ {
+    _id: ObjectId("68175db34bc859a6b9cea22c"),
+    name: "王彬",
+    contactPhone: "1111111111111",
+    arrangement: "周一早上9:00~周一下午16:00已预约"
+} ]);
+db.getCollection("MaintenancePerson").insert([ {
+    _id: ObjectId("68175db34bc859a6b9cea22d"),
+    name: "陆瑞",
+    contactPhone: "1111111111111",
+    arrangement: "周三早上9:00~周日下午16:00已预约"
+} ]);
+db.getCollection("MaintenancePerson").insert([ {
+    _id: ObjectId("68175db34bc859a6b9cea22e"),
+    name: "燕建华",
+    contactPhone: "1111111111111",
+    arrangement: "周二早上9:00~周五下午16:00已预约"
+} ]);
+db.getCollection("MaintenancePerson").insert([ {
+    _id: ObjectId("68175db34bc859a6b9cea22f"),
+    name: "赵秀梅",
+    contactPhone: "1111111111111",
+    arrangement: "周二早上9:00~周六下午16:00已预约"
+} ]);
+db.getCollection("MaintenancePerson").insert([ {
+    _id: ObjectId("68175db34bc859a6b9cea230"),
+    name: "兰平",
+    contactPhone: "1111111111111",
+    arrangement: "周二早上9:00~周一下午16:00已预约"
+} ]);
+db.getCollection("MaintenancePerson").insert([ {
+    _id: ObjectId("68175db34bc859a6b9cea231"),
+    name: "梁秀梅",
+    contactPhone: "1111111111111",
+    arrangement: "周一早上9:00~周二下午16:00已预约"
+} ]);
+db.getCollection("MaintenancePerson").insert([ {
+    _id: ObjectId("68175db34bc859a6b9cea232"),
+    name: "白丽华",
+    contactPhone: "1111111111111",
+    arrangement: "周五早上9:00~周四下午16:00已预约"
+} ]);
+db.getCollection("MaintenancePerson").insert([ {
+    _id: ObjectId("68175db34bc859a6b9cea233"),
+    name: "黄欣",
+    contactPhone: "1111111111111",
+    arrangement: "周日早上9:00~周二下午16:00已预约"
+} ]);
+db.getCollection("MaintenancePerson").insert([ {
+    _id: ObjectId("68175db34bc859a6b9cea234"),
+    name: "梁玉梅",
+    contactPhone: "1111111111111",
+    arrangement: "周六早上9:00~周四下午16:00已预约"
+} ]);

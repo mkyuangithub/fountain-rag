@@ -1,0 +1,110 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : fountain@localhost
+ Source Server Type    : MongoDB
+ Source Server Version : 40201
+ Source Host           : localhost:27017
+ Source Schema         : fountain
+
+ Target Server Type    : MongoDB
+ Target Server Version : 40201
+ File Encoding         : 65001
+
+ Date: 25/05/2025 11:25:35
+*/
+
+
+// ----------------------------
+// Collection structure for ChatConfigBackup
+// ----------------------------
+db.getCollection("ChatConfigBackup").drop();
+db.createCollection("ChatConfigBackup");
+db.getCollection("ChatConfigBackup").createIndex({
+    createdDate: NumberInt("-1")
+}, {
+    name: "createdDate_-1"
+});
+db.getCollection("ChatConfigBackup").createIndex({
+    updatedDate: NumberInt("-1")
+}, {
+    name: "updatedDate_-1"
+});
+db.getCollection("ChatConfigBackup").createIndex({
+    userName: NumberInt("1")
+}, {
+    name: "userName_1"
+});
+db.getCollection("ChatConfigBackup").createIndex({
+    backupDescr: NumberInt("1")
+}, {
+    name: "backupDescr_1",
+    unique: true
+});
+
+// ----------------------------
+// Documents of ChatConfigBackup
+// ----------------------------
+db.getCollection("ChatConfigBackup").insert([ {
+    _id: ObjectId("67d5802b39e7961e43a6496d"),
+    userName: "admin",
+    backupDescr: "20250315212707652.json",
+    fileCode: "xK6MjA93",
+    createdDate: ISODate("2025-03-15T13:27:07.665Z"),
+    updatedDate: ISODate("2025-03-15T13:27:07.665Z"),
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigBackup"
+} ]);
+db.getCollection("ChatConfigBackup").insert([ {
+    _id: ObjectId("67d5803539e7961e43a6496e"),
+    userName: "admin",
+    backupDescr: "abc.json",
+    fileCode: "HNIUuRcD",
+    createdDate: ISODate("2025-03-15T13:27:17.699Z"),
+    updatedDate: ISODate("2025-03-15T13:27:17.699Z"),
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigBackup"
+} ]);
+db.getCollection("ChatConfigBackup").insert([ {
+    _id: ObjectId("67d58cef04312415ea5fedec"),
+    userName: "admin",
+    backupDescr: "20250315222135486.json",
+    fileCode: "ViE4gi4Y",
+    createdDate: ISODate("2025-03-15T14:21:35.57Z"),
+    updatedDate: ISODate("2025-03-15T14:21:35.57Z"),
+    _class: "com.intelkry.fountainbase.agent.chatbot.bean.ChatConfigBackup"
+} ]);
+db.getCollection("ChatConfigBackup").insert([ {
+    _id: ObjectId("67e97679b65d97071c1093a6"),
+    userName: "admin",
+    backupDescr: "20250331005105456.json",
+    fileCode: "Nngccrgl",
+    createdDate: ISODate("2025-03-30T16:51:05.558Z"),
+    updatedDate: ISODate("2025-03-30T16:51:05.558Z"),
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigBackup"
+} ]);
+db.getCollection("ChatConfigBackup").insert([ {
+    _id: ObjectId("67eabb8e89ce8016e5b9e4e2"),
+    userName: "admin",
+    backupDescr: "20250331235806600.json",
+    fileCode: "HUNiaFu8",
+    createdDate: ISODate("2025-03-31T15:58:06.741Z"),
+    updatedDate: ISODate("2025-03-31T15:58:06.741Z"),
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigBackup"
+} ]);
+db.getCollection("ChatConfigBackup").insert([ {
+    _id: ObjectId("6808e265a7021048331bae93"),
+    userName: "admin",
+    backupDescr: "20250423205149597.json",
+    fileCode: "aPFwFqt3",
+    createdDate: ISODate("2025-04-23T12:51:49.76Z"),
+    updatedDate: ISODate("2025-04-23T12:51:49.76Z"),
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigBackup"
+} ]);
+db.getCollection("ChatConfigBackup").insert([ {
+    _id: ObjectId("68204d55a1219a35301a17db"),
+    userName: "admin",
+    backupDescr: "20250511151013345.json",
+    fileCode: "gpc6DYZz",
+    createdDate: ISODate("2025-05-11T07:10:13.501Z"),
+    updatedDate: ISODate("2025-05-11T07:10:13.501Z"),
+    _class: "com.mkyuan.fountainbase.agent.chatbot.bean.ChatConfigBackup"
+} ]);

@@ -1,0 +1,542 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : fountain@localhost
+ Source Server Type    : MongoDB
+ Source Server Version : 40201
+ Source Host           : localhost:27017
+ Source Schema         : fountain
+
+ Target Server Type    : MongoDB
+ Target Server Version : 40201
+ File Encoding         : 65001
+
+ Date: 25/05/2025 11:27:22
+*/
+
+
+// ----------------------------
+// Collection structure for UploadedFiles
+// ----------------------------
+db.getCollection("UploadedFiles").drop();
+db.createCollection("UploadedFiles");
+db.getCollection("UploadedFiles").createIndex({
+    code: NumberInt("1")
+}, {
+    name: "code_1",
+    unique: true
+});
+db.getCollection("UploadedFiles").createIndex({
+    type: NumberInt("1")
+}, {
+    name: "type_1"
+});
+db.getCollection("UploadedFiles").createIndex({
+    createdDate: NumberInt("-1")
+}, {
+    name: "createdDate_-1"
+});
+
+// ----------------------------
+// Documents of UploadedFiles
+// ----------------------------
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f6ade9233f9009d49c2c33"),
+    code: "xXnncGR1",
+    shortCode: "lF4NK4rL",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-09T17:27:05.501Z"),
+    updatedDate: ISODate("2025-04-09T17:27:05.501Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f75a64d664223e00c488e0"),
+    code: "NsDR71NI",
+    shortCode: "pBEl5JZh",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T05:43:00.012Z"),
+    updatedDate: ISODate("2025-04-10T05:43:00.012Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f75c5fd664223e00c488e1"),
+    code: "HLqkGzRb",
+    shortCode: "HvjLSbof",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T05:51:27.944Z"),
+    updatedDate: ISODate("2025-04-10T05:51:27.944Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f75c76d664223e00c488e2"),
+    code: "VIXXg3Rf",
+    shortCode: "E0JHttVu",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T05:51:50.146Z"),
+    updatedDate: ISODate("2025-04-10T05:51:50.146Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f75c79d664223e00c488e3"),
+    code: "cp7TIPJd",
+    shortCode: "cA6xygy3",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T05:51:53.342Z"),
+    updatedDate: ISODate("2025-04-10T05:51:53.342Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f75d61d664223e00c488e4"),
+    code: "HqdziQJO",
+    shortCode: "Ho4Ru1Yu",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T05:55:45.615Z"),
+    updatedDate: ISODate("2025-04-10T05:55:45.615Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f75d65d664223e00c488e5"),
+    code: "ydWPKpBX",
+    shortCode: "5k6gS3UE",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T05:55:49.194Z"),
+    updatedDate: ISODate("2025-04-10T05:55:49.194Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f75da8d664223e00c488e6"),
+    code: "U9aoXR7F",
+    shortCode: "UB4KSEHg",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T05:56:56.13Z"),
+    updatedDate: ISODate("2025-04-10T05:56:56.13Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f75dabd664223e00c488e7"),
+    code: "H8tx37Cw",
+    shortCode: "fdDuKVQc",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T05:56:59.928Z"),
+    updatedDate: ISODate("2025-04-10T05:56:59.928Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f75e57d664223e00c488e8"),
+    code: "lPKnUeNn",
+    shortCode: "lI8koc2X",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T05:59:51.619Z"),
+    updatedDate: ISODate("2025-04-10T05:59:51.619Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f75e86d664223e00c488e9"),
+    code: "aWnhYapC",
+    shortCode: "aZuGSJpC",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T06:00:38.765Z"),
+    updatedDate: ISODate("2025-04-10T06:00:38.765Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f75e8cd664223e00c488ea"),
+    code: "xkCQWPg1",
+    shortCode: "xT1Yj4y4",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T06:00:44.532Z"),
+    updatedDate: ISODate("2025-04-10T06:00:44.532Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f75e9cd664223e00c488eb"),
+    code: "R5BGOqFT",
+    shortCode: "R84nPemN",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T06:01:00.065Z"),
+    updatedDate: ISODate("2025-04-10T06:01:00.065Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f75ef0d664223e00c488ec"),
+    code: "lGJmqlxu",
+    shortCode: "lpJQl0mZ",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T06:02:24.964Z"),
+    updatedDate: ISODate("2025-04-10T06:02:24.964Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f75f37f0951076481b9087"),
+    code: "bfgr3FG8",
+    shortCode: "5Ha12i0p",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T06:03:35.779Z"),
+    updatedDate: ISODate("2025-04-10T06:03:35.779Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f75f70f0951076481b9088"),
+    code: "l4dyczaY",
+    shortCode: "l8j7T9OO",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T06:04:32.306Z"),
+    updatedDate: ISODate("2025-04-10T06:04:32.306Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f75f90f0951076481b9089"),
+    code: "gM4TtvsI",
+    shortCode: "xvJXtYJi",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T06:05:04.989Z"),
+    updatedDate: ISODate("2025-04-10T06:05:04.989Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f76023f0951076481b908a"),
+    code: "00bU7ixU",
+    shortCode: "pqYox1gI",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T06:07:31.573Z"),
+    updatedDate: ISODate("2025-04-10T06:07:31.573Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f7605cb4b7eb4f7563a56b"),
+    code: "59VzuaSz",
+    shortCode: "VKQYYTmW",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T06:08:28.042Z"),
+    updatedDate: ISODate("2025-04-10T06:08:28.042Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f760c2b4b7eb4f7563a56c"),
+    code: "a0mtJHiu",
+    shortCode: "zysHWgO2",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T06:10:10.007Z"),
+    updatedDate: ISODate("2025-04-10T06:10:10.007Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f76312b4b7eb4f7563a56d"),
+    code: "tnEzJfa",
+    shortCode: "GdlYygA6",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T06:20:02.221Z"),
+    updatedDate: ISODate("2025-04-10T06:20:02.221Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f7651fb4b7eb4f7563a56e"),
+    code: "phajc0So",
+    shortCode: "Yd9ymOHA",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T06:28:47.215Z"),
+    updatedDate: ISODate("2025-04-10T06:28:47.215Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f76b73316bac37ef5ecd64"),
+    code: "EiO6rzDL",
+    shortCode: "RFuUrjwW",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T06:55:47.187Z"),
+    updatedDate: ISODate("2025-04-10T06:55:47.187Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f7938021a1d5694c54f3f5"),
+    code: "yw9zcdgP",
+    shortCode: "GNR7OZOz",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T09:46:40.435Z"),
+    updatedDate: ISODate("2025-04-10T09:46:40.435Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f7971521a1d5694c54f3f6"),
+    code: "zVhOBaWs",
+    shortCode: "zBbM7NYZ",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T10:01:57.027Z"),
+    updatedDate: ISODate("2025-04-10T10:01:57.027Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f7973d21a1d5694c54f3f7"),
+    code: "zY1WajTk",
+    shortCode: "ljFa3Nk9",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-10T10:02:37.237Z"),
+    updatedDate: ISODate("2025-04-10T10:02:37.237Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f8ab5524d6ab0dfdfc1876"),
+    code: "xuaa8uEH",
+    shortCode: "4PVkrtWg",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-11T05:40:37.223Z"),
+    updatedDate: ISODate("2025-04-11T05:40:37.223Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f8af3b24d6ab0dfdfc1877"),
+    code: "a1M9Q5F",
+    shortCode: "Gf6v2NHR",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-11T05:57:15.853Z"),
+    updatedDate: ISODate("2025-04-11T05:57:15.853Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f8b3eb24d6ab0dfdfc1878"),
+    code: "Y1VDN8RH",
+    shortCode: "JDwRJhJq",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-11T06:17:15.239Z"),
+    updatedDate: ISODate("2025-04-11T06:17:15.239Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f8b66424d6ab0dfdfc1879"),
+    code: "74ZxarJR",
+    shortCode: "7ZSzlIvf",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-11T06:27:48.464Z"),
+    updatedDate: ISODate("2025-04-11T06:27:48.464Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f8c7c524d6ab0dfdfc187a"),
+    code: "ina08cmr",
+    shortCode: "qHftMYTT",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-11T07:41:57.117Z"),
+    updatedDate: ISODate("2025-04-11T07:41:57.117Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("67f8c81124d6ab0dfdfc187b"),
+    code: "7ENotesY",
+    shortCode: "cumWkuAV",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-11T07:43:13.827Z"),
+    updatedDate: ISODate("2025-04-11T07:43:13.827Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("68052f1831c9a1159785768c"),
+    code: "iw60Mwh2",
+    shortCode: "juELWk6s",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-20T17:30:00.588Z"),
+    updatedDate: ISODate("2025-04-20T17:30:00.588Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("6805303d31c9a1159785768d"),
+    code: "lNg7Otbk",
+    shortCode: "HdLOwLhP",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-20T17:34:53.619Z"),
+    updatedDate: ISODate("2025-04-20T17:34:53.619Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("680531194498ea70bc4573c8"),
+    code: "yZ3UHwIu",
+    shortCode: "GebWPQQr",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-20T17:38:33.586Z"),
+    updatedDate: ISODate("2025-04-20T17:38:33.586Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("680531524498ea70bc4573c9"),
+    code: "Nv0SleJb",
+    shortCode: "iqXbbK71",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-20T17:39:30.157Z"),
+    updatedDate: ISODate("2025-04-20T17:39:30.157Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("6805336e4498ea70bc4573cd"),
+    code: "VzCkAwlm",
+    shortCode: "Vrj9PdJW",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-20T17:48:30.661Z"),
+    updatedDate: ISODate("2025-04-20T17:48:30.661Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("680533d24498ea70bc4573cf"),
+    code: "rLeRnTk",
+    shortCode: "G0Qb2jdY",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-20T17:50:10.601Z"),
+    updatedDate: ISODate("2025-04-20T17:50:10.601Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("680533db4498ea70bc4573d0"),
+    code: "G8965oco",
+    shortCode: "VgC4zMQr",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-20T17:50:19.235Z"),
+    updatedDate: ISODate("2025-04-20T17:50:19.235Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("6805f3425b76e23a03145e26"),
+    code: "loVTEVXj",
+    shortCode: "0QS8BjOA",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-21T07:26:58.844Z"),
+    updatedDate: ISODate("2025-04-21T07:26:58.844Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("6805f74990a4851f72de6d35"),
+    code: "qaeMB2OB",
+    shortCode: "0ug3sgvX",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-21T07:44:09.571Z"),
+    updatedDate: ISODate("2025-04-21T07:44:09.571Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("6805f825723a68200c03bd73"),
+    code: "2H4edqw2",
+    shortCode: "Rc05LthD",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-21T07:47:49.5Z"),
+    updatedDate: ISODate("2025-04-21T07:47:49.5Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("6805f9c02a1eba7302d161eb"),
+    code: "cdXlQ82m",
+    shortCode: "gweFOB1M",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-21T07:54:40.34Z"),
+    updatedDate: ISODate("2025-04-21T07:54:40.34Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("6805fb9c3ac7cd44b8500839"),
+    code: "4YW2CRt7",
+    shortCode: "USI5dROn",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-21T08:02:36.718Z"),
+    updatedDate: ISODate("2025-04-21T08:02:36.718Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("6805fcae5416153da1df98ec"),
+    code: "gQCc3Gxd",
+    shortCode: "atC1k60U",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-21T08:07:10.8Z"),
+    updatedDate: ISODate("2025-04-21T08:07:10.8Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("6805fe9d50d57b798c99945f"),
+    code: "dKpnoQY",
+    shortCode: "EioAHyEY",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-21T08:15:25.603Z"),
+    updatedDate: ISODate("2025-04-21T08:15:25.603Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("6806005180a7b87353ec7a04"),
+    code: "pAGBaHZZ",
+    shortCode: "UasNpvZK",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-21T08:22:41.928Z"),
+    updatedDate: ISODate("2025-04-21T08:22:41.928Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("680600df80a7b87353ec7a07"),
+    code: "H3q8LB2E",
+    shortCode: "f0iKNPdu",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-21T08:25:03.176Z"),
+    updatedDate: ISODate("2025-04-21T08:25:03.176Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("6806295b80a7b87353ec7a09"),
+    code: "HJ0hAuHN",
+    shortCode: "HIxBqiL9",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-21T11:17:47.615Z"),
+    updatedDate: ISODate("2025-04-21T11:17:47.615Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);
+db.getCollection("UploadedFiles").insert([ {
+    _id: ObjectId("68062a7980a7b87353ec7a41"),
+    code: "7h67b6ZS",
+    shortCode: "caT5DS3w",
+    type: NumberInt("2"),
+    userId: "admin",
+    createdDate: ISODate("2025-04-21T11:22:33.427Z"),
+    updatedDate: ISODate("2025-04-21T11:22:33.427Z"),
+    _class: "com.mkyuan.fountainbase.Upload.bean.UploadBean"
+} ]);

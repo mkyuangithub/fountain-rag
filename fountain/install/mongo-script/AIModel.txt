@@ -1,0 +1,33 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : fountain@localhost
+ Source Server Type    : MongoDB
+ Source Server Version : 40201
+ Source Host           : localhost:27017
+ Source Schema         : fountain
+
+ Target Server Type    : MongoDB
+ Target Server Version : 40201
+ File Encoding         : 65001
+
+ Date: 25/05/2025 11:25:13
+*/
+
+
+// ----------------------------
+// Collection structure for AIModel
+// ----------------------------
+db.getCollection("AIModel").drop();
+db.createCollection("AIModel");
+db.getCollection("AIModel").createIndex({
+    type: NumberInt("1")
+}, {
+    name: "type_1",
+    unique: true
+});
+db.getCollection("AIModel").createIndex({
+    UserName: NumberInt("1")
+}, {
+    name: "UserName_1"
+});

@@ -1,0 +1,111 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : fountain@localhost
+ Source Server Type    : MongoDB
+ Source Server Version : 40201
+ Source Host           : localhost:27017
+ Source Schema         : fountain
+
+ Target Server Type    : MongoDB
+ Target Server Version : 40201
+ File Encoding         : 65001
+
+ Date: 25/05/2025 11:24:41
+*/
+
+
+// ----------------------------
+// Collection structure for AIFunctionals
+// ----------------------------
+db.getCollection("AIFunctionals").drop();
+db.createCollection("AIFunctionals");
+db.getCollection("AIFunctionals").createIndex({
+    code: NumberInt("1")
+}, {
+    name: "code_1",
+    unique: true
+});
+
+// ----------------------------
+// Documents of AIFunctionals
+// ----------------------------
+db.getCollection("AIFunctionals").insert([ {
+    _id: ObjectId("67ac96e1461b0000e8006642"),
+    type: 1,
+    prompt: "#坚持使用中文。\n请你根据这段描述:($<prompt>)生成一堆的适用于搜索引擎的关键字列表。\n你的输出要求：严格按照我给你的这个json schema: $<returnTemplate>来返回你的答案。\n输出时你千万不要在这个返回结果外包裹上任何的修饰、转义符也不要使用```json或者是```一类的符号来，而是直接按照我要求你的JSON Schema返回。\n如果你发觉无法生成任何标签时请你直接返回给我一个空的json形式的String数组如：{\"keywords\":[]}",
+    code: 10001,
+    description: "用于知识库里生成一组标签并以json格式输出用函数",
+    returnTemplate: "{\"keywords\":\n  [\n    \"keyword1\",\"keyword2\",\"keyword3\"\n  ]\n}"
+} ]);
+db.getCollection("AIFunctionals").insert([ {
+    _id: ObjectId("67ade09b35750000f40079f2"),
+    type: 1,
+    code: 10002,
+    prompt: "#坚持使用中文。\n这是一个洗数、给数据打标签并折解成适用于搜索引擎的关键字的任务，任务基本条件设定如下：\n1.我有一条数据，这条数据是这样的: {数据内容: $<prompt>}。\n2.我手上有一套系统己有的关键字列表，内容为：{系统己有关键字: $<keywords>}。\n3.\n你的输出要求：只用己有的系统标签对数据进行折分关键字。折分时请你在当前数据里如果发觉符合系统己有关键字的内容的话把它提炼成适合搜索引擎的关键字而不是原文或者长文照抄某一条数据的内容。折完后的关键字每次请你按照我给你的这个json schema{\"keywords\":[\"根据该条数据适合这个系统keyword2的中文内容，如果该条数据不适用keyword1此处返回一个空字符串如: \"\"。\",\"提供给你的系统英文keyword2的名称\": \"根据该条数据适合这个系统keyword2的中文内容，如果该条数据不适用keyword2此处返回一个空字符串如: \"\"。\"]}来返回你的输出。如果遇有不能匹配上的标签在你的输出结果中就不需要列出这个关键字。请输出时你千万不要在这个返回结果外包裹上任何的修饰、转义符也不要使用```json或者是```一类的符号来，而是直接按照我要求你的JSON Schema返回。下面是输出时的正例和反例供你参考：\n错误的返回例子1: ```json{\"keywords\":[\"keyword1\",\"keyword2\"]}。\n错误的返回例子2: \"```json{\"keywords\":[\"keyword1\",\"keyword2\"]}。\n正确的返回例子: {\"keywords\":[\"keyword1\",\"keyword2\"]}。\n如果你发觉无法生成任何标签时请你直接返回给我一个空的json形式的String数组如：{\"keywords\":[]}。",
+    description: "用于在把数据进入知识库时用己有标签给单条数据打标用函数",
+    returnTemplate: ""
+} ]);
+db.getCollection("AIFunctionals").insert([ {
+    _id: ObjectId("67b6e65d35c11934dc4989ec"),
+    code: NumberInt("20001"),
+    type: NumberInt("1"),
+    prompt: "#你现在身处中国，系统环境为中文，每轮输出请坚持使用中文。\n#任务背景设定\n- 关联客户的当前提问和历史提问。\n- 你是一个搜索引擎。\n- 当前客户的提问为：$<prompt>。历史提问为$<historyPromptList>\n- 关聊用户的历史提问上下文以及当前提问，判断客户的提问是否存在：过于宽范，过于简单，打招呼闲聊等问题导致搜索结果不准。\n#需要你做的事\n$<requirement>\n#你的输出要求\n- 严格按照我给你的这个json schema: $<returnTemplate>来返回你的答案。\n- 输出时的注意：请你千万不要在这个返回结果外包裹上任何的修饰、转义符也不要使用```json或者是```一类的符号来，而是直接按照我要求你的JSON Schema返回。",
+    description: "用于对客户的提问进行LLM Rewrite用函数",
+    returnTemplate: "{\n  \"result\": \"此处放置根据客户的提问你重写的query，每个关键字以逗号隔开\",\n  \"chatType\": 如果客户提前的提问纯粹属于闲聊请你标识成0，否则都标识成1，注意此处的值必须使用整数型阿拉伯数字而不得是字符, \n}",
+    _class: "com.mkyuan.fountainbase.ai.bean.AIFunctionals"
+} ]);
+db.getCollection("AIFunctionals").insert([ {
+    _id: ObjectId("67b6ec9d35c11934dc4989ee"),
+    code: NumberInt("20002"),
+    type: NumberInt("1"),
+    prompt: "#坚持使用中文。\n#这是一个医药类的洗数、给数据打标签任务，任务基本条件设定如下：\n1.当前用户正在提问，用户的提问是这样: {\"用户当前提问\": $<prompt>}。\n2.系统内置标签内容为：{\"系统标签\": $<labels>}。\n3.你的输出要求：你把自己当作一个药房药剂师角色当听到客户前来向你述说症状时你会如何回答用户？请你把当前客户的提问折解成标签，尽量使用我提供给你的系统标签，同时你对于这个问题是如何回答客户的那就把你的回答也折成适合搜索引擎搜索药品的关键字追加进去。折键后的标签每次请你按照我给你的这个json schema{\"keywords\":[\"keyword1\",\"keyword2\"]}来返回你的输出。如果遇有不能匹配上的标签在你的输出结果中就不需要列出这个标签。请输出时你千万不要在这个返回结果外包裹上任何的修饰、转义符也不要使用```json或者是```一类的符号来，而是直接按照我要求你的JSON Schema返回。下面是输出时的正例和反例供你参考：\n错误的返回例子1: ```json{\"keywords\":[\"keyword1\",\"keyword2\"]}。\n错误的返回例子2: \"```json{\"keywords\":[\"keyword1\",\"keyword2\"]}。\n正确的返回例子: {\"keywords\":[\"keyword1\",\"keyword2\"]}。\n如果你发觉无法生成任何标签时请你直接返回给我一个空的json形式的String数组如：{\"keywords\":[]}。",
+    description: "给用户的提问打标签",
+    returnTemplate: "",
+    _class: "com.mkyuan.fountainbase.ai.bean.AIFunctionals"
+} ]);
+db.getCollection("AIFunctionals").insert([ {
+    _id: ObjectId("67c06aae13f1687d3e5003ea"),
+    code: NumberInt("20003"),
+    type: NumberInt("1"),
+    prompt: "#坚持使用中文。\n#现在是一个文字折分任务\n- 我会给你一段内容，这段内容为：$<prompt>。你的输出总是严格按照我要求的json schema: $<returnTemplate>输出。\n- 这段内容是我从文本里一个个chunk折出来的，这样的一个chunk可能含有的是单条完整信息也可能包括多段信息。因此我需要你做的是如果碰到含有多段落的信息的，就给我把它折成多段，折分时要保证原输入段落在语义上的完整性，只有当完全不相干的两个段落存在时你才进行折分。\n- 当你需要把原有输入折分时请你每次带着相同的前导文字然后后跟折分的内容，前导文字为原始输入内容中具有相同含义的部分，以此不破坏原段落在语义上的连贯性。\n- 一个问和一个答构成一个完整的段落而不要去折分它们。对于问没有答或者答没有问都可以折成两个段落。\n- 折分时请谨慎1，不要破坏段落的完整性，对于带有项目符号列表的段落如：1，2，3，4或者是a,b,c,d,或者是罗马数字的段落内容时你不得折分。如：内容：1. 子内容。2. 子内容 3. 子内容此时你不得折分这些内容，它们都属于一段。如：a. 子内容。b. 子内容 c. 子内容或者是a)子内容 b)子内容类似这样的表示的话此时你不得折分这些内容，它们都属于一段。\n- 折分时同一个句号内的内容绝对不能被折，而是把含有多个。号的数据去做折分，我们只看句号来做完整性判断。以下正反例供你参考：\n - 正例1: 你好，有没有吃的。我这有一个玩具。这时就要折成两句话。\n - 正例2: 我们有多种小吃：小吃1，小吃2，小吃3。明天中午开会，这时就要折成两句话。\n - 反例1: 我这有苹果、香蕉、西瓜，如果折成：\"records\": [\"我这有\",\"苹果,\"香蕉\", \"西瓜\"]就不对了。\n- 如果不能折就把原数据原样返回。\n- 你的返回总是按照这种格式：{\"records\": [\"折分后的条数1\",\"折分后的条数2\"]}来返回。\n- 即使只有一条数据你也需要以json字符数组返回如：  {\"records\": [\"原条数据内容\"]}。\n- 请输出时你千万不要在这个返回结果外包裹上任何的修饰、转义符也不要使用```json或者是```一类的符号来，而是直接按照我要求你的JSON Schema返回。下面是输出时的正例和反例供你参考：\n- 错误的返回例子1: ```json{\"records\": [\"折分后的条数1\",\"折分后的条数2\"]}。\n- 错误的返回例子2: \"```json{\"records\": [\"折分后的条数1\",\"折分后的条数2\"]}。\n- 正确的返回例子: {\"records\": [\"折分后的条数1\",\"折分后的条数2\"]}。",
+    description: "在一个chunk里观察是否可以继续折分的AI自动折分",
+    returnTemplate: "{\n  \"records\": [\n                \"折分后的条数1\",\n                \"折分后的条数2\"\n  ]\n}",
+    _class: "com.intelkry.fountainbase.ai.bean.AIFunctionals"
+} ]);
+db.getCollection("AIFunctionals").insert([ {
+    _id: ObjectId("67c960d4e94f394f70f18062"),
+    code: NumberInt("30001"),
+    type: NumberInt("1"),
+    prompt: "- 当前用户在之前的聊天里看到了一些数据，现在他正在执行换一批数据（相当于在浏览器里点击翻页这个动作）。\n- 因此我从知识库里加载了一批和之前不一样的数据给到你来参考。\n- 新数据里如果有符合用户当前提问的你就按照设定规则来回答。\n- 如果没有你可以自己用拟人化的语气告诉客户没有发现新的可用参考资料，可以让客户再换一批或者重新提问。",
+    description: "聊天界面中用于AI翻页时的猫娘",
+    returnTemplate: "",
+    _class: "com.intelkry.fountainbase.ai.bean.AIFunctionals"
+} ]);
+db.getCollection("AIFunctionals").insert([ {
+    _id: ObjectId("67c9e52785a643582c4c354b"),
+    code: NumberInt("30002"),
+    type: NumberInt("1"),
+    prompt: "- 碰到用户和你打招呼一类的闲聊，请你以拟人和以及亲和的口吻和客户打个最简短的招呼即可，输出绝对不要超过30个字。\n- 碰到用户的提问有提到：历史、军事、政治、八卦娱乐、电影、人物、传奇、小说、回家作业、作文、编程技术相关的话题你都认为是闲聊。",
+    description: "用户当前闲聊如何应对的猫娘",
+    returnTemplate: "",
+    _class: "com.intelkry.fountainbase.ai.bean.AIFunctionals"
+} ]);
+db.getCollection("AIFunctionals").insert([ {
+    _id: ObjectId("67cf709ea38dab68aafdc514"),
+    code: NumberInt("30003"),
+    type: NumberInt("1"),
+    prompt: "#坚持使用中文。\n#文章切割时的对于当前页内容总结摘要任务\n- 我现在给你一段这样内容：$<prompt>，请把这段内容加我给你的$<fileName>联合起来做文章的总结。\n- 请你要基于理解输入内容和文件名的基础上把核心主要内容总结出来，这件事就和你阅读文章一样，你在阅读完这一段后请你总结一下你认为该段主要内容讲述了一件什么样的事？\n你的输出要求\n- 必须使用中文输出\n- 请保持你的总结尽量覆盖到段落的核心要点、核心内容、关键名词、可根据总结索引查找到这一段内容的。总结要输出成以英文逗号分隔的适合搜索引擎搜索用关键字格式。并严格按照这个格式返回给我：$<returnTemplate>。\n-  请输出时你千万不要在这个返回结果外包裹上任何的修饰、转义符也不要使用```json或者是```一类的符号来，而是直接按照我要求你的JSON Schema返回。下面是输出时的正例和反例供你参考：\n- 错误的返回例子1: ```json{\"abstract\": \"上一章节讲述内容：总结关键字1, 总结关键字2\"}。\n- 错误的返回例子2: \"```json{\"abstract\": \"上一章节讲述内容：总结关键字1, 总结关键字2\"}。\n- 正确的返回例子: {\"records\": \"上一章节讲述内容：总结关键字1, 总结关键字2\"]}。",
+    description: "用于按页切割时总结上一页内容的",
+    returnTemplate: "{\n  \"abstract\": \"把总结变成一个个,分隔的可适应搜索引擎的关键字全部列成一个字符串返回如：总结关键字1, 总结关键字2, 总结关键了3，前面用'上一章节讲述内容：'开头\"\n}",
+    _class: "com.intelkry.fountainbase.ai.bean.AIFunctionals"
+} ]);
+db.getCollection("AIFunctionals").insert([ {
+    _id: ObjectId("67ebba095b566443a09636d6"),
+    code: NumberInt("40001"),
+    type: NumberInt("1"),
+    prompt: "- 这是一个根据导购话术寻找话题中是否有商品匹配的数据筛选整理工作。\n- 这是你刚才回答我的推荐商品的导购话术:$<prompt>，如果导购话术中不存在任何商品或者和商品导购、商品推荐无关那么请你直接返回给我一个空的列表如：{productIds: []}。\n- 这是商品列表$<productList>,\n- 请把符合推荐商品导购话术中出现的商品列表信息整理成$<returnTemplate>格式\n- 如果提供给你的商品列表中找不到任何可以符合推荐商品导购话术中的商品的情况时请你给我一个空的列表如：{productIds: []}",
+    description: "Agent应用-零售智能导购中筛选出符合回答的商品列表",
+    returnTemplate: "{\n  productIds: [\"符合导购话术中的productCode1\", \"符合导购话术中的productCode2\", 符合导购话术中的productCode3\"]\n}",
+    _class: "com.mkyuan.fountainbase.ai.bean.AIFunctionals"
+} ]);

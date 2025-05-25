@@ -1,0 +1,202 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: workflow
+  name: SmartQA_Rewrite
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/tongyi:0.0.25@325423749d5e71f8b4681af1b2ed46d7686cb1947e443a86ba5d14ac45ff85a4
+kind: app
+version: 0.3.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: llm
+      id: 1747296763433-source-1747296771756-target
+      source: '1747296763433'
+      sourceHandle: source
+      target: '1747296771756'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: end
+      id: 1747296771756-source-1747297238660-target
+      source: '1747296771756'
+      sourceHandle: source
+      target: '1747297238660'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: 开始
+        type: start
+        variables:
+        - label: userPrompt
+          max_length: 255
+          options: []
+          required: true
+          type: paragraph
+          variable: userPrompt
+        - label: historyPrompt
+          max_length: 4096
+          options: []
+          required: true
+          type: paragraph
+          variable: historyPrompt
+      height: 116
+      id: '1747296763433'
+      position:
+        x: 80
+        y: 282
+      positionAbsolute:
+        x: 80
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: qwen-plus-latest
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 3de5ca92-9aad-491a-8bac-c99a4a6ef05f
+          role: system
+          text: ''
+        - id: 33eaa6c9-08ab-4afc-a1d4-65e2965cb0d3
+          role: user
+          text: "#任务背景设定\n- 关联客户的当前提问和历史提问。\n- 你是一个搜索引擎。\n- 当前客户的提问为：{{#1747296763433.userPrompt#}}。历史提问为{{#1747296763433.historyPrompt#}}\n\
+            - 关聊用户的历史提问上下文以及当前提问，判断客户的提问是否存在：过于宽范，过于简单，打招呼闲聊等问题导致搜索结果不准。\n#需要你做的事\n\
+            - 你首先把客户的提问中相关的敬语，打招呼等词汇去除掉。\n- 如果用户在提问中使用的问法词法或者提问有逻辑不对的地方请你帮用户纠正一下。\n\
+            - 在折分用户词语时要同时使用同义词、近义词、语义相近的词去扩充用户的提问。\n# 打标签折关键字特别要求\n- 请你以公司相关规章、制度、条款、操作手册的解读的专业背景知识想一下作为这样一个专业领域的在线客服在线搜索引擎会用到哪些关键字以便于用户在提出相应的诉求后快速可以检索到相关的知识库内的答案？请你把这些标签折成搜索引擎可以适合的关键字每个关键字。\n\
+            - 按照一个搜索引擎可以搜索出的最大有效关键词重新折解客户的提问为带有英文数字逗号的关键词排列，关键字颗粒越细越好就和搜索引擎的分词那种效果一样。\n\
+            - 折解时注意要把越能命中搜索结果的关键词越往前排，把称谓，动词放到整句提问的最后（即句子末尾）。\n- 关键字折得越多越好，关键字一定是要可以覆盖用户的提问、包括同义词、语义相近同时请记得把你自己如何回答这个问题的答案也折成关键字加入到改写的query里。\n\
+            - 严格按照我给你的这个json schema: \n{\n  \"result\": \"此处放置根据客户的提问你重写的query，每个关键字以逗号隔开\"\
+            ,\n  \"chatType\": 如果客户提前的提问纯粹属于闲聊请你标识成0，否则都标识成1，注意此处的值必须使用整数型阿拉伯数字而不得是字符,\
+            \ \n}"
+        selected: false
+        structured_output:
+          schema:
+            additionalProperties: false
+            properties:
+              chatType:
+                type: number
+              result:
+                type: string
+            required:
+            - result
+            - chatType
+            type: object
+        structured_output_enabled: true
+        title: LLM
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 90
+      id: '1747296771756'
+      position:
+        x: 382.32053701411166
+        y: 282
+      positionAbsolute:
+        x: 382.32053701411166
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1747296771756'
+          - structured_output
+          variable: difyResult
+        selected: true
+        title: 结束
+        type: end
+      height: 90
+      id: '1747297238660'
+      position:
+        x: 688
+        y: 282
+      positionAbsolute:
+        x: 688
+        y: 282
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    viewport:
+      x: -312.59404798562434
+      y: 46.08981025765536
+      zoom: 1.1908568493649683

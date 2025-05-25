@@ -1,0 +1,31 @@
+fountain:
+   nacos:
+      #address: 192.168.0.106:8848
+      address: localhost:8848
+      #address: 10.1.0.4:8848
+spring:
+   application:
+     name: fountainbase
+   main:
+      banner-mode: off
+      allow-bean-definition-overriding: true
+   cloud:
+      nacos:
+         discovery:
+            server-addr: ${fountain.nacos.address}
+            namespace: local
+            group: DEFAULT_GROUP
+            username: nacos
+            password: nacos
+         config:
+            shared-configs[0]:
+               data-id: common.yaml
+            namespace: local
+            server-addr: ${fountain.nacos.address}
+            file-extension: yaml
+            group: DEFAULT_GROUP
+            username: nacos
+            password: nacos
+   jackson:
+      time-zone: GMT+8
+      date-format: yyyy-MM-dd HH:mm:ss

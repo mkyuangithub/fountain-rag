@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: fountaingateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: fountainbase_route
+          uri: lb://fountainbase    # 改为服务名
+          predicates:
+            - Path=/api/**
+          filters:
+            - PreserveHostHeader
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+        namespace: local
+        group: DEFAULT_GROUP
+        username: nacos    # 添加用户名
+        password: nacos    # 添加密码
+      discovery:
+        server-addr: localhost:8848
+        namespace: local
+        group: DEFAULT_GROUP
+        username: nacos
+        password: nacos
+        #ip: localhost
+        #port: 8080
+        heart-beat-timeout: 15000
+        heart-beat-interval: 5000
+
+  logging:
+    level:
+      com.alibaba.cloud.nacos: debug
+      com.alibaba.nacos: debug

@@ -1,0 +1,205 @@
+app:
+  description: retailRewrite
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: workflow
+  name: SmartRewrite
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/tongyi:0.0.25@325423749d5e71f8b4681af1b2ed46d7686cb1947e443a86ba5d14ac45ff85a4
+kind: app
+version: 0.3.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: llm
+      id: 1746969315667-source-1746970223437-target
+      source: '1746969315667'
+      sourceHandle: source
+      target: '1746970223437'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: end
+      id: 1746970223437-source-1746970595125-target
+      source: '1746970223437'
+      sourceHandle: source
+      target: '1746970595125'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: 开始
+        type: start
+        variables:
+        - label: userPrompt
+          max_length: 255
+          options: []
+          required: true
+          type: text-input
+          variable: userPrompt
+        - label: historyPrompt
+          max_length: 2048
+          options: []
+          required: true
+          type: paragraph
+          variable: historyPrompt
+      height: 116
+      id: '1746969315667'
+      position:
+        x: 82.16026850705589
+        y: 282
+      positionAbsolute:
+        x: 82.16026850705589
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1746969315667'
+          - userPrompt
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: qwen-turbo-latest
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: b0ff39b9-813d-498b-ade0-4a6f47e7d576
+          role: system
+          text: ''
+        - id: fc7c7759-84a4-427b-9db0-a76b5283d7f2
+          role: user
+          text: "#你现在身处中国，系统环境为中文，每轮输出请坚持使用中文。\n#任务背景设定\n- 关联客户的当前提问和历史提问。\n- 你是我们公司的一个零售美食APP搜索引擎，你专注于把内部商品主数据向用户推荐。\n\
+            - 当前客户的提问为：{{#1746969315667.userPrompt#}}。历史提问为{{#1746969315667.historyPrompt#}}\n\
+            - 关聊用户的历史提问上下文以及当前提问，判断客户的提问是否存在：过于宽范，过于简单，打招呼闲聊等问题导致搜索结果不准。\n#需要你做的事\n\
+            - 如果客户是属于闲聊那么请你把闲聊在返回结果中标识出来。\n- 你首先把客户的提问中相关的敬语，打招呼等词汇去除掉。\n- 如果用户在提问中使用的问法词法或者提问有逻辑不对的地方请你帮用户纠正一下。\n\
+            - 在折分用户词语时要同时使用同义词、近义词、语义相近的词去扩充用户的提问。\n- 按照一个搜索引擎可以搜索出的最大有效关键词重新折解客户的提问为带有英文数字逗号的关键词排列。\n\
+            - 折解时注意要把越能命中搜索结果的关键词越往前排，把称谓，动词放到整句提问的最后（即句子末尾）。\n- 折解后再需要你补充一些内容，补充要求为：作为一个零售品导购美食营养搭配专家，根据客户的提问，同时从问题表面以及客户潜在购物心理以及潜在购买食品或者符合客户当前述求的食品类别、可能食品为出发点你会如何回答用户当前的问题？把你的答案拆成适合搜索引擎的关键字并补充在客户提问里，此处你不做任何咨询类服务。\n\
+            - 关键字折得越多越好，关键字一定是要可以覆盖用户的提问、包括同义词、语义相近同时请记得把你自己如何回答这个问题的答案也折成关键字加入到改写的query里。\n\
+            - 严格按照我给你的这个json schema: \n{\n  \"result\": \"此处放置根据客户的提问你重写的query，每个关键字以逗号隔开\"\
+            ,\n  \"chatType\": 如果客户提前的提问纯粹属于闲聊请你标识成0，否则都标识成1，注意此处的值必须使用整数型阿拉伯数字而不得是字符,\
+            \ \n}"
+        selected: false
+        structured_output:
+          schema:
+            additionalProperties: false
+            properties:
+              chatType:
+                type: number
+              result:
+                type: string
+            required:
+            - result
+            - chatType
+            type: object
+        structured_output_enabled: true
+        title: LLM
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 90
+      id: '1746970223437'
+      position:
+        x: 388
+        y: 282
+      positionAbsolute:
+        x: 388
+        y: 282
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1746970223437'
+          - structured_output
+          variable: difyResult
+        selected: false
+        title: 结束
+        type: end
+      height: 90
+      id: '1746970595125'
+      position:
+        x: 691
+        y: 282
+      positionAbsolute:
+        x: 691
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    viewport:
+      x: -316.1666185337192
+      y: 46.08981025765536
+      zoom: 1.1908568493649683
