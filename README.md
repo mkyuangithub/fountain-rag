@@ -84,6 +84,7 @@ qdrant/qdrant &
 - 引擎内的聊天功能使用的rewrite步骤和最终AI聊天显示用的是dify中的流程。
 - rewrite: dify工作流，提供了2个rewrite和2个chatflow，位于fountain/install/dify中，均可导入
 #### 项目启动
+![image](https://github.com/mkyuangithub/fountain-rag/blob/main/img/data-flow-1.jpg)  
 - 启动nacos、mongodb、elastic search、redis、minio、qdrant、dify
 - 在intellij里直接导入fountain-rag中的fountain项目。该项目是fountain-base->fountain-gateway这样的结构的。其中fountain-gateway是spring cloud api gateway2.0用于对外暴中接口的，把这两个项目都启动起来。
 - 在vs code里导入fountain-web项目：npm install后，记得fountain-web里的.env，.env.dev， .env.pro里的P_SECURE_KEY要和nacos里的secretKey的值必须一致，因为前后端对于一些密码数据传输用的是AESWithPBE来加密的，共用一个secret key的。
@@ -101,7 +102,7 @@ pip install paddlenlp
 pip install paddleocr==3.0.0
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
-- 启动
+- 启动与运行
 可以在cursor里直接启动：  
 ![image](https://github.com/mkyuangithub/fountain-rag/blob/main/img/python-service-1.jpg)  
 也可以使用生产级别的gunicorn启动如：  
