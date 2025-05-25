@@ -16,6 +16,7 @@ will update later
 #### 使用技术
 ##### 后端：
 - 使用的是spring 2.4.2 + spring cloud2.0 使用的rag引擎
+- 引擎中的rewrite和聊天用的是和dify集成，项目内提供了dify的dsl
 - rerank，embedding算法使用的是bge large, 使用的是python flask(位于 fountain/install/python目录内
 - 配置中心使用的是：nacos 2.0.2
 - elastic search: 7.9(目前后端spring boot不支持elastic search8.0）
@@ -67,3 +68,7 @@ qdrant/qdrant &
 - windows下你也可以使用docker desktop
 - 你也可以使用qdrant的编译安装
 - 安装后无需导入任何数据，在引擎的web界面内在创建知识库时会自动创建的
+##### dify集成
+- 自行安装dify 1.3.0或者以下（目前最新为1.4.0）
+- 引擎内的聊天功能使用的rewrite步骤和最终AI聊天显示用的是dify中的流程。
+- rewrite: dify工作流，提供了2个rewrite和2个chatflow，位于fountain/install/dify中，均可导入
