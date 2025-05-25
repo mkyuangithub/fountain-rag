@@ -22,6 +22,8 @@ will update later
 ![image](https://github.com/mkyuangithub/fountain-rag/blob/main/img/architecture-overview-2.jpg)
 ##### Fountain引擎拥有着极高的召回率
 ![image](https://github.com/mkyuangithub/fountain-rag/blob/main/img/architecture-overview-3.jpg)
+##### Fountain Engine Architecture Design
+![image](https://github.com/mkyuangithub/fountain-rag/blob/main/img/architecture-overview-4.jpg)
 #### 使用技术
 ##### 后端：
 - 使用的是spring 2.4.2 + spring cloud2.0 使用的rag引擎
