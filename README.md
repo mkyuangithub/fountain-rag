@@ -123,3 +123,6 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 把FountainBGE.py运行在：5000端口  
 把FountainOcr.py运行在: 5001端口  
 spring boot->flask service之间需要配置系统（用户）环境变量：X_API_KEY，因为spring boot和python flask间通讯会使用http header来匹配这个 X_API_KEY。具体见nacos里的配置  
+
+#### 如何使用
+请看https://github.com/mkyuangithub/fountain-rag/wiki
