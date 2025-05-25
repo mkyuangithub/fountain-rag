@@ -14,8 +14,8 @@ will update later
 
 ### 中文
 #### 介绍
-本项目是一个基于Spring boot, vue3技术的企业级高级RAG引擎。
-在引擎内使用了最前沿的Rewrite、Retrieve、Read设计，使得本引擎可以做到几乎0幻觉。
+本项目是一个基于Spring boot, vue3技术的企业级高级RAG引擎。它使用了最前沿的RAG技术：Rewrite、Retrieve、Read设计，使得本引擎可以做到几乎0幻觉并支持多模态的企业级RAG应用，可以作为企业知识中台的基本底座。
+它即支持云原生集群式布署也可支持单机布署。
 ##### Fountain引擎设计思路
 ![image](https://github.com/mkyuangithub/fountain-rag/blob/main/img/architecture-overview-1.jpg)
 ##### Fountain引擎和一般的RAG引擎的区别
