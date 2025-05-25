@@ -15,7 +15,16 @@ will update later
 ### 中文
 #### 介绍
 本项目是一个基于Spring boot, vue3技术的企业级高级RAG引擎。它使用了最前沿的RAG技术：Rewrite、Retrieve、Read设计，使得本引擎可以做到几乎0幻觉并支持多模态的企业级RAG应用，可以作为企业知识中台的基本底座。
-它即支持云原生集群式布署也可支持单机布署。
+它即支持云原生集群式布署也可支持单机布署。  
+- 云原生
+- spring boot微服务架构
+- 支持txt, doc, docx, xlsx, xls, pdf, csv格式的文本上传与chunk
+- 上传和chunk时，引擎支持AI提练成Q&A, AI 提练成完整一段, AI自动给数据打标答, AI自动关联段落与段落, AI自动关联上页与下页内容
+- 支持解读word和pdf里的图片
+- 回答时支持“以图搜图”模型（用的是bge-vl-embedding)
+- 集成dify使用了并行流以应对诸如：数据富文本（图文并茂）在LLM回答后以并行chat flow的形式在本地关联主数据渲染
+- 己支持国际化i18n
+- Rewrite处以及LLM最后促裁节点集成的是dify（dify dsl文件已置于工程fountain/install/dify内）
 ##### Fountain引擎设计思路
 ![image](https://github.com/mkyuangithub/fountain-rag/blob/main/img/architecture-overview-1.jpg)
 ##### Fountain引擎和一般的RAG引擎的区别
