@@ -87,3 +87,17 @@ qdrant/qdrant &
 - 在vs code里导入fountain-web项目：npm install后，记得fountain-web里的.env，.env.dev， .env.pro里的P_SECURE_KEY要和nacos里的secretKey的值必须一致，因为前后端对于一些密码数据传输用的是AESWithPBE来加密的，共用一个secret key的。
 - 启动后：vscode->fountain-gateway->fountain-base这样通讯的。这样的结构是为fountain的后端引擎docker化作预留的云原生架构用。
 - 如果导入了mongodb的库，那么默认登录用户名和密码为：admin/111111
+##### python服务为flask服务
+实现了：paddle-ocr, bge-reranker-large, bge-vl-large, bge-rerank-large，启动文件在：/fountain/install/python。
+- 安装必要依赖
+```
+pip install -U FlagEmbedding
+pip install  transformers
+python3 -m pip install paddlepaddle==2.6.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install paddlepaddle
+pip install paddlenlp
+pip install paddleocr==3.0.0
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+```
+- 启动
+可以在cursor里直接启动：
