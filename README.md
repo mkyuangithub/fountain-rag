@@ -100,14 +100,14 @@ pip install paddleocr==3.0.0
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
 - 启动
-可以在cursor里直接启动：
-![image](https://github.com/mkyuangithub/fountain-rag/blob/main/img/python-service-1.jpg)
-也可以使用生产级别的gunicorn启动如：
+可以在cursor里直接启动：  
+![image](https://github.com/mkyuangithub/fountain-rag/blob/main/img/python-service-1.jpg)  
+也可以使用生产级别的gunicorn启动如：  
 ```
-gunicorn -w 4 -b 0.0.0.0:5000 FountainBGE:app
+-- gunicorn -w 4 -b 0.0.0.0:5000 FountainBGE:app
 ```
-整体项目运行的流程为：vue3->fountain-gateway->fountain-base->FountainBGE.py(包括FountainOcr.py)。
-你可以把这两个文件自己合并成一个flask，不过一般在生产环境最佳实践为：
-- 把FountainBGE.py运行在：5000端口
-- 把FountainOcr.py运行在: 5001端口
-- spring boot->flask service之间需要配置系统（用户）环境变量：X_API_KEY，因为spring boot和python flask间通讯会使用http header来匹配这个 X_API_KEY。具体见nacos里的配置
+整体项目运行的流程为：vue3->fountain-gateway->fountain-base->FountainBGE.py(包括FountainOcr.py)。  
+你可以把这两个文件自己合并成一个flask，不过一般在生产环境最佳实践为：  
+把FountainBGE.py运行在：5000端口  
+把FountainOcr.py运行在: 5001端口  
+spring boot->flask service之间需要配置系统（用户）环境变量：X_API_KEY，因为spring boot和python flask间通讯会使用http header来匹配这个 X_API_KEY。具体见nacos里的配置  
