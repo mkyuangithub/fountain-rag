@@ -102,7 +102,7 @@ pip install paddlenlp
 pip install paddleocr==3.0.0
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
-- 启动与运行
+- python flask的启动与运行  
 可以在cursor里直接启动：  
 ![image](https://github.com/mkyuangithub/fountain-rag/blob/main/img/python-service-1.jpg)  
 也可以使用生产级别的gunicorn启动如：  
