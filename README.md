@@ -64,4 +64,6 @@ docker run -p 6333:6333 \
 -v /datadrive01/qdrant/config/qdrant_config.yaml:/qdrant/config/production.yaml \
 qdrant/qdrant &
 ```
-
+- windows下你也可以使用docker desktop
+- 你也可以使用qdrant的编译安装
+- 安装后无需导入任何数据，在引擎的web界面内在创建知识库时会自动创建的
