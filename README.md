@@ -45,7 +45,23 @@ will update later
 - 安装
 ```
 docker pull qdrant/qdrant
-docker run -p 6333:6333 qdrant/qdrant
 ```
-
+- 配置（必须要配置api key）
+一个典型的标准标准 qdrant_config.yaml文件，内容如下
+```
+storage:
+  # Specify where you want to store snapshots.
+  snapshots_path: ./snapshots
+service:
+  #qdrant api-key
+  api_key: ltdo0a6m9h-gh-af-eg-cf-ccand!093
+```
+- 启动qdrant时可以如下启动
+```
+docker run -p 6333:6333 \
+-v /datadrive01/qdrant/data:/qdrant/storage \
+-v /datadrive01/qdrant/snapshots:/qdrant/snapshots \
+-v /datadrive01/qdrant/config/qdrant_config.yaml:/qdrant/config/production.yaml \
+qdrant/qdrant &
+```
 
