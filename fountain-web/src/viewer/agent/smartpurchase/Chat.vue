@@ -374,7 +374,13 @@ const handlePromptSubmit = async () => {
           return;
         }
         // data 已经是字符串形式，不需要再次 JSON.stringify
-        let msg = JSON.parse(data);
+        let msg;
+        try {
+          msg = JSON.parse(data);
+        } catch (error) {
+          console.warn('JSON解析失败:', error);
+          msg = {}; // 设置为空对象
+        }
         if (msg.error && msg.error != "") {
           message.error(msg.error);
           return;
@@ -391,7 +397,7 @@ const handlePromptSubmit = async () => {
           if (!readConversation) {
             conversationId.value = msg.conversationId;
             readConversation = true;
-            console.log(">>>>>>conversationId->"+conversationId.value);
+            console.log(">>>>>>conversationId->" + conversationId.value);
           }
         }
         if (msg.dataIds) {

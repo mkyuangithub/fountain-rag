@@ -78,7 +78,7 @@ public class DifyTools {
             Map<String, String> header = new HashMap<>();
             header.put("Content-Type", "application/json");
             header.put("Authorization", headerApiKeyValue);
-            String jsonResponse = this.okHttpHelper.postJsonWithMultiHeaders(workflowUrl, payload, header);
+            String jsonResponse = this.okHttpHelper.postJsonWithMultiHeaders(workflowUrl,payload,header,30000,30000);
             // 解码Unicode
             String decodedResponse = StringEscapeUtils.unescapeJava(jsonResponse);
             logger.info(">>>>>>invokeWithBlocking from dify result->{}", decodedResponse);

@@ -121,8 +121,6 @@
         </div>
         <div style="font-size: 13px; color: #595959; margin-bottom: 10px; margin-top: 20px;">聊天时全局系统角色描述</div>
         <a-textarea v-model:value="systemMsg" rows="15" style="width: 100%;" />
-        <div style="font-size: 13px; color: #595959; margin-bottom: 10px; margin-top: 20px;">聊天返回数据区域设置</div>
-        <div ref="editorRef" style="height: 500px; border: 1px solid #ccc"></div>
       </div>
     </div>
 
@@ -174,11 +172,8 @@ import DifyConfigApi from "@/api/DifyConfigApi.js";
 import { Modal } from 'ant-design-vue';
 import PopUserSelect from '@/viewer/users/PopUserSelect.vue';
 import PopBackMgt from '@/viewer/users/PopBackMgt.vue';
-//使用monaco编辑器
-import * as monaco from 'monaco-editor'
-import GroovyHighlightRules from 'monaco-ace-tokenizer/lib/ace/definitions/groovy';
-import { registerRulesForLanguage } from 'monaco-ace-tokenizer';
-const editorRef = ref(null)  // 使用ref引用DO
+
+
 
 const chatConfigList = ref([]);
 const currentMainConfigId = ref(0);
@@ -519,7 +514,6 @@ const onHandleUpdateConfig = async (config) => {
           chatSelectedDifySequenceNo.value = res.chatSelectedDifySequenceNo;
           await listAllRewriteDifyConfigs();
           await listAllChatDifyConfigs();
-          editor.setValue(res.groovyRules);
         }
       });
     } else {
@@ -544,38 +538,11 @@ const onHandleUpdateConfig = async (config) => {
       chatSelectedDifySequenceNo.value = res.chatSelectedDifySequenceNo;
       await listAllRewriteDifyConfigs();
       await listAllChatDifyConfigs();
-      editor.setValue(res.groovyRules);
     }
   } catch (err) {
     console.error(">>>>>>onHandleUpdateConfig error", err);
   }
 }
-
-const getStepStyle = (step) => {
-  const baseStyle = {
-    borderRadius: '8px',
-    border: '1px solid',
-    fontSize: '13px',
-    marginBottom: '0',
-    minHeight: '80px',  // 添加最小高度确保一致性
-  };
-
-  if (step.enabled) {
-    return {
-      ...baseStyle,
-      borderColor: '#7171FB',
-      color: '#595959',
-      backgroundColor: '#ffffff',
-    };
-  } else {
-    return {
-      ...baseStyle,
-      borderColor: '#D9D9D9',
-      color: '#7F7F7F',
-      backgroundColor: '#F2F2F2',
-    };
-  }
-};
 
 const handleBacMgt = async () => {
   if (updateType && updateType.value > 0) {
@@ -619,14 +586,12 @@ const handleSaveConfig = async () => {
     let token = authorization.getToken();
     let encryptToken = encrypt_url(token);
     let userName = authorization.getUserName();
-    let groovyRules = editor.getValue();
     let payload = {
       "token": encryptToken,
       "userName": userName,
       "configMainId": currentMainConfigId.value,
       "description": description.value,
       "systemMsg": systemMsg.value,
-      "groovyRules": groovyRules,
       "temperature": globalTemperature.value,
       "knowledgeRepoIdList": [selectedKnowledgeRepoId.value], // 将单个值包装成数组
       "allowUsers": Array.from(allowUsers.value),
@@ -669,19 +634,7 @@ const handleSaveConfig = async () => {
   }
 };
 
-const onHandleStepSet = (step) => {
-  try {
 
-    popStepDetailShow.value = true;
-    popStepTitle.value = step.stepDescription;
-    stepEnabled.value = step.enabled;
-    stepPrompt.value = step.stepPrompt;
-    stepTemperature.value = step.temperature;
-    stepType.value = step.type;
-  } catch (err) {
-    console.error(">>>>>>编辑详细步骤时失败:", err);
-  }
-};
 const handleRefreshConfig = async () => {
   try {
     await getChatConfigList();
@@ -693,20 +646,7 @@ const handleRefreshConfig = async () => {
     console.error(">>>>>>handleRefreshConfig error:", err);
   }
 };
-const initUserChatConfig = async () => {
-  try {
-    let token = authorization.getToken();
-    let encryptToken = encrypt_url(token);
-    let userName = authorization.getUserName();
-    let payload = {
-      "token": encryptToken,
-      "userName": userName,
-    }
-    const res = await UserChatConfigApi.initChatConfig(payload);
-  } catch (err) {
-    console.error(">>>>>>initUserChatConfig error:", err);
-  }
-}
+
 const getChatConfigMainId = async () => {
   try {
     let token = authorization.getToken();
@@ -740,7 +680,6 @@ const getChatConfigList = async () => {
   }
 }
 
-let editor = null // 保存editor实例
 onMounted(async () => {
   // 确保DOM元素存在
   await getChatConfigList();
@@ -749,34 +688,9 @@ onMounted(async () => {
   await resetChatConfigMain();
   await listAllRewriteDifyConfigs();
   await listAllChatDifyConfigs();
-  editor = monaco.editor.create(editorRef.value, {
-    value: '',
-    language: 'groovy',
-    theme: 'vs-dark',
-    automaticLayout: true,
-    codeLens: false, // 代码镜头
-    scrollBeyondLastLine: false, // 滚动完最后一行后再滚动一屏幕
-    colorDecorators: true, // 颜色装饰器
-    accessibilitySupport: "auto", // 辅助功能支持  "auto" | "off" | "on"
-    tabSize: 2,
-    readOnly: false,
-    minimap: {
-      enabled: false // 禁用小地图可以提升性能
-    }
-  });
-  // 注册groovy语言
-  monaco.languages.register({ id: 'groovy' });
-  // 设置语法高亮规则
-  registerRulesForLanguage('groovy', new GroovyHighlightRules());
+  
 });
 
-// 组件销毁时清理editor
-onBeforeUnmount(() => {
-  if (editor) {
-    editor.dispose()
-    editor = null
-  }
-})
 </script>
 
 <style scoped>
